@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Brands Hub | Home Studio Surat</title>
+  <meta name="description" content="Explore the legacy of Home Studio Surat, from our origins in 2001 to our current 19,500 sqft luxury experience center. Meet our founders Rajesh and Sanjay Patel.">
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    /* Custom styles for About page */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: var(--border-color);
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6rem;
+      position: relative;
+    }
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .timeline-dot {
+      width: 14px;
+      height: 14px;
+      background-color: var(--accent);
+      border: 3px solid var(--bg-primary);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+    .timeline-content {
+      width: 44%;
+      background-color: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+    }
+    .timeline-year {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+      font-weight: 300;
+      line-height: 1;
+    }
+    .timeline-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-item, .timeline-item:nth-child(even) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 45px;
+      }
+      .timeline-dot {
+        left: 20px;
+        transform: translateX(-50%);
+      }
+      .timeline-content {
+        width: 100%;
+        padding: 2.2rem;
+      }
+    }
+    
+    /* Founders Section */
+    .founders-section {
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      background-color: var(--bg-secondary);
+    }
+    .founders-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 4rem;
+    }
+    .founder-profile-card {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      background-color: var(--bg-tertiary);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .founder-info-block {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .founder-role {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+    .founder-name {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .founder-desc {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-weight: 300;
+      color: var(--text-secondary);
+    }
+    
+    @media (max-width: 768px) {
+      .founders-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .founder-info-block {
+        padding: 1.5rem;
+      }
+    }
+    
+    .founder-quote {
+      text-align: center;
+      max-width: 850px;
+      margin: 6rem auto 0;
+      padding: 4rem 2rem 0;
+      border-top: 1px solid var(--border-color);
+    }
+    .quote-mark {
+      font-family: var(--font-serif);
+      font-size: 5rem;
+      line-height: 0.1;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 2rem;
+    }
+    .quote-text {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--text-primary);
+      margin-bottom: 2rem;
+    }
+    .quote-author {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 3rem;
+      margin-top: 5rem;
+    }
+    .value-box {
+      border-left: 1px solid var(--accent);
+      padding-left: 2rem;
+    }
+    .value-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+
+  <style>
+    .page-hero {
+        padding-top: 150px;
+        padding-bottom: 80px;
+        text-align: center;
+        background-color: var(--bg-secondary);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .page-title {
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 6vw, 5rem);
+        color: var(--accent);
+        margin-bottom: 1rem;
+    }
+    .page-subtitle {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .brand-section {
+        padding: 6rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .brand-section:nth-child(even) {
+        background-color: var(--bg-tertiary);
+    }
+    .brand-section:nth-child(odd) {
+        background-color: var(--bg-primary);
+    }
+    
+    .brand-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .brand-logo {
+        max-width: 250px;
+        max-height: 100px;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    
+    .brand-video-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto 3rem;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        background: #000;
+        aspect-ratio: 16/9;
+    }
+    .brand-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .brand-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .gallery-item {
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        background: var(--bg-tertiary);
+        border: 1px solid var(--border-color);
+    }
+    .gallery-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    .gallery-item:hover .gallery-img {
+        transform: scale(1.05);
+    }
+    
+    .explore-brand-btn-container {
+        text-align: center;
+        margin-top: 3rem;
+    }
+    
+    .explore-brand-btn-container .btn-secondary {
+        padding: 1.2rem 3.5rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        border: 1px solid var(--accent);
+        background: transparent;
+        color: var(--accent);
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+    .explore-brand-btn-container .btn-secondary:hover {
+        background: var(--accent);
+        color: var(--bg-primary);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-outline"></div>
+
+  <!-- Global Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="Homestudiologo.png" alt="Home Studio Surat" class="logo-img">
+      </a>
+      
+      <nav class="nav-menu">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="products.html" class="nav-link">Products</a>
+          <!-- Fixed Full-Width Mega Menu -->
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h4 class="mega-column-title">CP Fittings</h4>
+              <ul class="mega-list">
+                <li><a href="bathroom-fittings-products.html">Bathroom Fittings</a></li>
+                <li><a href="kitchen-sink-products.html">Kitchen Sink</a></li>
+                <li><a href="sanitaryware-products.html">Sanitaryware</a></li>
+                <li><a href="steam-sauna-products.html">Steam & Sauna System</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4 class="mega-column-title">Tiles</h4>
+              <ul class="mega-list">
+                <li><a href="domestic-tiles-products.html">Domestic Tiles</a></li>
+                <li><a href="imported-tiles-products.html">Imported Tiles</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4 class="mega-column-title">Windows</h4>
+              <ul class="mega-list">
+                <li><a href="#">Premium Windows</a></li>
+              </ul>
+            </div>
+            <div class="mega-featured">
+              <h4 class="mega-column-title">The Showroom</h4>
+              <img src="images/showroom-interior.jpg" alt="Showroom Preview" class="mega-featured-img">
+              <p class="mega-featured-text">Browse live demonstration shower and wellness spa zones in Surat.</p>
+              <a href="showroom.html" class="text-gold" style="font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase;">Explore Showroom →</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nav-item">
+          <a href="bathroom-fittings.html" class="nav-link">Brands</a>
+          <div class="mega-menu">
+            <div class="mega-column" style="grid-column: span 1;">
+              <h4 class="mega-column-title">Partner Brands</h4>
+              <p class="mega-featured-text" style="margin-bottom: 2rem;">We house curated curations of premium international brands under one exclusive roof.</p>
+              <a href="bathroom-fittings.html" class="btn-secondary" style="padding: 0.8rem 1.6rem; font-size: 0.75rem;">Brand Directory</a>
+            </div>
+            <div style="grid-column: span 3;">
+              <h4 class="mega-column-title">Featured Global Labels</h4>
+              <div class="mega-brand-grid">
+                <a href="brand-artize.html" class="mega-brand-item">ARTIZE</a>
+                <a href="brand-axor.html" class="mega-brand-item">AXOR</a>
+                <a href="brand-blanco.html" class="mega-brand-item">BLANCO</a>
+                <a href="brand-carysil.html" class="mega-brand-item">CARYSIL</a>
+                <a href="brand-geberit.html" class="mega-brand-item">GEBERIT</a>
+                <a href="brand-grohe.html" class="mega-brand-item">GROHE</a>
+                <a href="brand-hansgrohe.html" class="mega-brand-item">HANSGROHE</a>
+                <a href="brand-jaquar.html" class="mega-brand-item">JAQUAR</a>
+                <a href="brand-oyster.html" class="mega-brand-item">OYSTER</a>
+                <a href="brand-stiebel.html" class="mega-brand-item">STIEBEL</a>
+                <a href="brand-tece.html" class="mega-brand-item">TECE</a>
+                <a href="brand-toto.html" class="mega-brand-item">TOTO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nav-item">
+          <a href="showroom.html" class="nav-link">Showroom</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </nav>
+      
+      <div class="nav-controls">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        
+        <div class="hamburger" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Drawer -->
+  <div class="mobile-drawer">
+            <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      
+      <!-- Products Accordion -->
+      <div class="mobile-nav-item-accordion">
+        <div class="mobile-nav-accordion-header">
+          <a href="products.html" class="mobile-nav-link" style="color: inherit; text-decoration: none;">Products</a>
+          <button type="button" class="mobile-accordion-btn" aria-label="Toggle Products Submenu">+</button>
+        </div>
+        <div class="mobile-nav-accordion-body">
+          <div class="mobile-submenu-group" style="margin-bottom: 0.5rem;">
+            <a href="products.html" class="mobile-submenu-link text-gold" style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; display: block;">Browse All Collections Hub →</a>
+          </div>
+
+          <!-- Nested Accordion: CP Fittings -->
+          <div class="mobile-nav-item-accordion nested-accordion" style="margin-bottom: 0.8rem;">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">CP Fittings</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle CP Fittings">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="bathroom-fittings-products.html" class="mobile-submenu-link">Bathroom Fittings</a>
+              <a href="kitchen-sink-products.html" class="mobile-submenu-link">Kitchen Sinks</a>
+              <a href="sanitaryware-products.html" class="mobile-submenu-link">Sanitaryware</a>
+              <a href="steam-sauna-products.html" class="mobile-submenu-link">Steam & Sauna Systems</a>
+            </div>
+          </div>
+
+          <!-- Nested Accordion: Tiles -->
+          <div class="mobile-nav-item-accordion nested-accordion" style="margin-bottom: 0.8rem;">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">Tiles</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle Tiles">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="domestic-tiles-products.html" class="mobile-submenu-link">Domestic Tiles</a>
+              <a href="imported-tiles-products.html" class="mobile-submenu-link">Imported Tiles</a>
+            </div>
+          </div>
+
+          <!-- Nested Accordion: Windows -->
+          <div class="mobile-nav-item-accordion nested-accordion">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">Windows</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle Windows">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="contact.html?inquiry=Windows-Systems" class="mobile-submenu-link">Premium Windows</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brands Accordion -->
+      <div class="mobile-nav-item-accordion">
+        <div class="mobile-nav-accordion-header">
+          <a href="bathroom-fittings.html" class="mobile-nav-link">Brands</a>
+          <button class="mobile-accordion-btn" aria-label="Toggle Brands Submenu">+</button>
+        </div>
+        <div class="mobile-nav-accordion-body">
+          <div class="mobile-submenu-group" style="margin-bottom: 0.5rem;">
+            <a href="bathroom-fittings.html" class="mobile-submenu-link text-gold" style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; display: block;">Brand Directory →</a>
+          </div>
+          
+          <a href="brand-artize.html" class="mobile-submenu-link">ARTIZE</a>
+              <a href="brand-axor.html" class="mobile-submenu-link">AXOR</a>
+              <a href="brand-blanco.html" class="mobile-submenu-link">BLANCO</a>
+              <a href="brand-carysil.html" class="mobile-submenu-link">CARYSIL</a>
+              <a href="brand-geberit.html" class="mobile-submenu-link">GEBERIT</a>
+              <a href="brand-grohe.html" class="mobile-submenu-link">GROHE</a>
+              <a href="brand-hansgrohe.html" class="mobile-submenu-link">HANSGROHE</a>
+              <a href="brand-jaquar.html" class="mobile-submenu-link">JAQUAR</a>
+              <a href="brand-oyster.html" class="mobile-submenu-link">OYSTER</a>
+              <a href="brand-stiebel.html" class="mobile-submenu-link">STIEBEL</a>
+              <a href="brand-tece.html" class="mobile-submenu-link">TECE</a>
+              <a href="brand-toto.html" class="mobile-submenu-link">TOTO</a>
+        </div>
+      </div>
+
+      <a href="showroom.html" class="mobile-nav-link">Showroom</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-footer-col">
+        <p style="font-weight: 600; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Home Studio Surat</p>
+        <p>Shiv Shambhu Ind. Estate, 37-B,</p>
+        <p>Udhana-Magdalla Road, Surat</p>
+      </div>
+      <div class="mobile-footer-col" style="text-align: right;">
+        <p style="font-weight: 600; margin-bottom: 0.5rem;">Landline</p>
+        <p>(0261) 2631965</p>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-overlay"></div>
+  <section class="page-hero">
+    <div class="container reveal">
+      <h1 class="page-title">Masterpieces in Water</h1>
+      <p class="page-subtitle">Explore our exclusive curation of the world's most elite bathroom fittings, sanitary ware, and wellness brands.</p>
+    </div>
+  </section>
+
+  <!-- Brands Showcase -->
+  
+  <!-- ARTIZE -->
+  <section class="brand-section" id="artize">
+    <div class="container">
+      <div class="brand-header reveal">
+        <img src="BRAND/ARTIZE/download.png" alt="ARTIZE Logo" class="brand-logo">
+      </div>
+      <div class="brand-gallery">
+        <div class="gallery-item reveal"><img src="BRAND/ARTIZE/navia-morning-stories-1.jpg" alt="ARTIZE" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/ARTIZE/6717af93b674ce964ff03a67.avif" alt="ARTIZE" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/ARTIZE/Q.jpg" alt="ARTIZE" class="gallery-img" loading="lazy"></div>
+      </div>
+      <div class="explore-brand-btn-container reveal">
+        <a href="brand-artize.html" class="btn-secondary">Explore ARTIZE</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AXOR -->
+  <section class="brand-section" id="axor">
+    <div class="container">
+      <div class="brand-header reveal">
+        <img src="BRAND/AXOR/logo.png" alt="AXOR Logo" class="brand-logo">
+      </div>
+      <div class="brand-video-container reveal">
+        <video class="brand-video" autoplay muted loop playsinline>
+          <source src="BRAND/AXOR/AXOR ShowerHeaven 1200.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="brand-gallery">
+        <div class="gallery-item reveal"><img src="BRAND/AXOR/axor shower heaven.jpg" alt="AXOR" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/AXOR/axor_showerselect id.jpg" alt="AXOR" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/AXOR/axor-axorstarckv.jpg" alt="AXOR" class="gallery-img" loading="lazy"></div>
+      </div>
+      <div class="explore-brand-btn-container reveal">
+        <a href="brand-axor.html" class="btn-secondary">Explore AXOR</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLANCO -->
+  <section class="brand-section" id="blanco">
+    <div class="container">
+      <div class="brand-header reveal">
+        <img src="BRAND/BLANCO/blanco.svg" alt="BLANCO Logo" class="brand-logo" style="filter: brightness(0); background: transparent; padding: 0;">
+      </div>
+      <div class="brand-gallery">
+        <div class="gallery-item reveal"><img src="BRAND/BLANCO/quatrus-usupersingle.jpg" alt="BLANCO" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/BLANCO/hafele_kitchen_sinks.webp" alt="BLANCO" class="gallery-img" loading="lazy"></div>
+      </div>
+      <div class="explore-brand-btn-container reveal">
+        <a href="brand-blanco.html" class="btn-secondary">Explore BLANCO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARYSIL -->
+  <section class="brand-section" id="carysil">
+    <div class="container">
+      <div class="brand-header reveal">
+        <img src="BRAND/CARYSIL/images.png" alt="CARYSIL Logo" class="brand-logo">
+      </div>
+      <div class="brand-gallery">
+        <div class="gallery-item reveal"><img src="BRAND/CARYSIL/CarysilKristallCollection.webp" alt="CARYSIL" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/CARYSIL/product-jpeg.jpg" alt="CARYSIL" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/CARYSIL/stainless steel kitchen fitting.jpg" alt="CARYSIL" class="gallery-img" loading="lazy"></div>
+      </div>
+      <div class="explore-brand-btn-container reveal">
+        <a href="brand-carysil.html" class="btn-secondary">Explore CARYSIL</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEBERIT -->
+  <section class="brand-section" id="geberit">
+    <div class="container">
+      <div class="brand-header reveal">
+        <img src="BRAND/GEBERIT/images.png" alt="GEBERIT Logo" class="brand-logo">
+      </div>
+      <div class="brand-gallery">
+        <div class="gallery-item reveal"><img src="BRAND/GEBERIT/Geberit-Sigma70-all-colours.jpg" alt="GEBERIT" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/GEBERIT/SIGMA 40 PLATES.avif" alt="GEBERIT" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/GEBERIT/SIGMA 50.jpg" alt="GEBERIT" class="gallery-img" loading="lazy"></div>
+      </div>
+      <div class="explore-brand-btn-container reveal">
+        <a href="brand-geberit.html" class="btn-secondary">Explore GEBERIT</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GROHE -->
+  <section class="brand-section" id="grohe">
+    <div class="container">
+      <div class="brand-header reveal">
+        <img src="BRAND/GROHE/images.png" alt="GROHE Logo" class="brand-logo">
+      </div>
+      <div class="brand-video-container reveal">
+        <video class="brand-video" autoplay muted loop playsinline>
+          <source src="BRAND/GROHE/ICON 3D.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="brand-gallery">
+        <div class="gallery-item reveal"><img src="BRAND/GROHE/AQUA CONCEAL.webp" alt="GROHE" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/GROHE/GROHE 3D ICON.jpg" alt="GROHE" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/GROHE/GROHE PLATES.webp" alt="GROHE" class="gallery-img" loading="lazy"></div>
+      </div>
+      <div class="explore-brand-btn-container reveal">
+        <a href="brand-grohe.html" class="btn-secondary">Explore GROHE</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HANSGROHE -->
+  <section class="brand-section" id="hansgrohe">
+    <div class="container">
+      <div class="brand-header reveal">
+        <img src="BRAND/HANSGROHE/logo.png" alt="HANSGROHE Logo" class="brand-logo">
+      </div>
+      <div class="brand-video-container reveal">
+        <video class="brand-video" autoplay muted loop playsinline>
+          <source src="BRAND/HANSGROHE/AVALEGRA.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="brand-gallery">
+        <div class="gallery-item reveal"><img src="BRAND/HANSGROHE/Rain infinity series.jpeg" alt="HANSGROHE" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/HANSGROHE/avalegra_brushed-bronze.jpg" alt="HANSGROHE" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/HANSGROHE/raindance-alive.jpg" alt="HANSGROHE" class="gallery-img" loading="lazy"></div>
+      </div>
+      <div class="explore-brand-btn-container reveal">
+        <a href="brand-hansgrohe.html" class="btn-secondary">Explore HANSGROHE</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JAQUAR -->
+  <section class="brand-section" id="jaquar">
+    <div class="container">
+      <div class="brand-header reveal">
+        <img src="BRAND/JAQUAR/download.png" alt="JAQUAR Logo" class="brand-logo">
+      </div>
+      <div class="brand-gallery">
+        <div class="gallery-item reveal"><img src="BRAND/JAQUAR/0055444_queens-prime_400.webp" alt="JAQUAR" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/JAQUAR/0096401_Laguna-375x450-copy-2.jpeg" alt="JAQUAR" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/JAQUAR/mode-1.jpg" alt="JAQUAR" class="gallery-img" loading="lazy"></div>
+      </div>
+      <div class="explore-brand-btn-container reveal">
+        <a href="brand-jaquar.html" class="btn-secondary">Explore JAQUAR</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OYSTER -->
+  <section class="brand-section" id="oyster">
+    <div class="container">
+      <div class="brand-header reveal">
+        <img src="BRAND/OYSTER/images.jpeg" alt="OYSTER Logo" class="brand-logo">
+      </div>
+      <div class="brand-video-container reveal">
+        <video class="brand-video" autoplay muted loop playsinline>
+          <source src="BRAND/OYSTER/DREAM WAVE.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="brand-gallery">
+        <div class="gallery-item reveal"><img src="BRAND/OYSTER/DREAM WAVE.png" alt="OYSTER" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/OYSTER/ARIKA.png" alt="OYSTER" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/OYSTER/CASCADIA.png" alt="OYSTER" class="gallery-img" loading="lazy"></div>
+      </div>
+      <div class="explore-brand-btn-container reveal">
+        <a href="brand-oyster.html" class="btn-secondary">Explore OYSTER</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STIEBEL ELTRON -->
+  <section class="brand-section" id="stiebel">
+    <div class="container">
+      <div class="brand-header reveal">
+        <img src="BRAND/STIEBEL/images.png" alt="STIEBEL Logo" class="brand-logo">
+      </div>
+      <div class="brand-gallery">
+        <div class="gallery-item reveal"><img src="BRAND/STIEBEL/Showroom_5083_767x480.jpg" alt="STIEBEL" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/STIEBEL/images.jpeg" alt="STIEBEL" class="gallery-img" loading="lazy"></div>
+      </div>
+      <div class="explore-brand-btn-container reveal">
+        <a href="brand-stiebel.html" class="btn-secondary">Explore STIEBEL</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECE -->
+  <section class="brand-section" id="tece">
+    <div class="container">
+      <div class="brand-header reveal">
+        <img src="BRAND/TECE/menulogo.svg" alt="TECE Logo" class="brand-logo">
+      </div>
+      <div class="brand-gallery">
+        <div class="gallery-item reveal"><img src="BRAND/TECE/COL_TECEdrainway_1064x765_if-Design.jpg" alt="TECE" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/TECE/TECEdrainprofile_Kollektionsteaser_2.jpg" alt="TECE" class="gallery-img" loading="lazy"></div>
+      </div>
+      <div class="explore-brand-btn-container reveal">
+        <a href="brand-tece.html" class="btn-secondary">Explore TECE</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOTO -->
+  <section class="brand-section" id="toto">
+    <div class="container">
+      <div class="brand-header reveal">
+        <img src="BRAND/TOTO/download.png" alt="TOTO Logo" class="brand-logo">
+      </div>
+      <div class="brand-video-container reveal">
+        <video class="brand-video" autoplay muted loop playsinline>
+          <source src="BRAND/TOTO/TOTO FLOATATION.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="brand-gallery">
+        <div class="gallery-item reveal"><img src="BRAND/TOTO/NX1.webp" alt="TOTO" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/TOTO/RW WASHLET.jpg" alt="TOTO" class="gallery-img" loading="lazy"></div>
+        <div class="gallery-item reveal"><img src="BRAND/TOTO/FLOATATION.jpg" alt="TOTO" class="gallery-img" loading="lazy"></div>
+      </div>
+      <div class="explore-brand-btn-container reveal">
+        <a href="brand-toto.html" class="btn-secondary">Explore TOTO</a>
+      </div>
+    </div>
+  </section>
+<!-- Detailed Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <img src="Homestudiologo.png" alt="Home Studio Surat Logo" class="footer-logo-img">
+        <p class="footer-brand-desc">
+          Surat's premium lifestyle destination for luxury CP fittings, tiles, sanitary ware, wellness steam, sauna & spas. Curating elite global brands since 2001.
+        </p>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title">Collections</h4>
+        <ul class="footer-links">
+          <li><a href="bathroom-fittings.html">Bathroom Fittings</a></li>
+          <li><a href="products.html?cat=sanitary">Sanitary Ware</a></li>
+          <li><a href="products.html?cat=tiles">Ceramic & Marble Tiles</a></li>
+          <li><a href="products.html?cat=wellness">Steam, Sauna & Spa</a></li>
+          <li><a href="products.html?cat=windows">Premium Windows</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="showroom.html">Surat Showroom</a></li>
+          <li><a href="bathroom-fittings.html">Global Brands</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+            <div>
+        <h4 class="footer-col-title">Locations</h4>
+        <ul class="footer-links">
+          <li><a href="luxury-home-studio-mumbai.html">Mumbai</a></li>
+          <li><a href="luxury-home-studio-delhi.html">Delhi</a></li>
+          <li><a href="luxury-home-studio-bangalore.html">Bangalore</a></li>
+          <li><a href="luxury-home-studio-hyderabad.html">Hyderabad</a></li>
+          <li><a href="luxury-home-studio-ahmedabad.html">Ahmedabad</a></li>
+          <li><a href="luxury-home-studio-chennai.html">Chennai</a></li>
+          <li><a href="luxury-home-studio-kolkata.html">Kolkata</a></li>
+          <li><a href="luxury-home-studio-pune.html">Pune</a></li>
+          <li><a href="luxury-home-studio-jaipur.html">Jaipur</a></li>
+          <li><a href="luxury-home-studio-surat.html">Surat</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Experience Center</h4>
+        <p class="footer-newsletter-text" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">
+          Shiv Shambhu Ind. Estate, 37-B,<br>
+          Udhana - Magdalla Road, Surat,<br>
+          Gujarat 395002
+        </p>
+        <p style="font-size: 0.9rem; color: var(--text-primary); font-weight: 500; margin-bottom: 1.5rem;">
+          Landline: (0261) 2631965
+        </p>
+        <h4 class="footer-col-title" style="margin-bottom: 0.8rem; font-size: 0.75rem;">Newsletter</h4>
+        <form class="newsletter-form" action="#" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+          <input class="newsletter-input" type="email" placeholder="Enter your email address" required aria-label="Newsletter email">
+          <button class="newsletter-btn" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Home Studio (formerly Studio Ceramic). All Rights Reserved. Luxury Experience Center, Surat.</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link">Instagram</a>
+        <a href="#" class="footer-social-link">Pinterest</a>
+        <a href="#" class="footer-social-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=6"></script>
+</body>
+</html>

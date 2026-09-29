@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanitaryware | Home Studio Surat</title>
+  <meta name="description" content="Explore the legacy of Home Studio Surat, from our origins in 2001 to our current 19,500 sqft luxury experience center. Meet our founders Rajesh and Sanjay Patel.">
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    /* Custom styles for About page */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: var(--border-color);
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6rem;
+      position: relative;
+    }
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .timeline-dot {
+      width: 14px;
+      height: 14px;
+      background-color: var(--accent);
+      border: 3px solid var(--bg-primary);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+    .timeline-content {
+      width: 44%;
+      background-color: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+    }
+    .timeline-year {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+      font-weight: 300;
+      line-height: 1;
+    }
+    .timeline-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-item, .timeline-item:nth-child(even) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 45px;
+      }
+      .timeline-dot {
+        left: 20px;
+        transform: translateX(-50%);
+      }
+      .timeline-content {
+        width: 100%;
+        padding: 2.2rem;
+      }
+    }
+    
+    /* Founders Section */
+    .founders-section {
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      background-color: var(--bg-secondary);
+    }
+    .founders-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 4rem;
+    }
+    .founder-profile-card {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      background-color: var(--bg-tertiary);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .founder-info-block {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .founder-role {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+    .founder-name {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .founder-desc {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-weight: 300;
+      color: var(--text-secondary);
+    }
+    
+    @media (max-width: 768px) {
+      .founders-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .founder-info-block {
+        padding: 1.5rem;
+      }
+    }
+    
+    .founder-quote {
+      text-align: center;
+      max-width: 850px;
+      margin: 6rem auto 0;
+      padding: 4rem 2rem 0;
+      border-top: 1px solid var(--border-color);
+    }
+    .quote-mark {
+      font-family: var(--font-serif);
+      font-size: 5rem;
+      line-height: 0.1;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 2rem;
+    }
+    .quote-text {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--text-primary);
+      margin-bottom: 2rem;
+    }
+    .quote-author {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 3rem;
+      margin-top: 5rem;
+    }
+    .value-box {
+      border-left: 1px solid var(--accent);
+      padding-left: 2rem;
+    }
+    .value-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+
+  <style>
+    .page-hero {
+        padding-top: 150px;
+        padding-bottom: 80px;
+        text-align: center;
+        background-color: var(--bg-secondary);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .page-title {
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 6vw, 5rem);
+        color: var(--accent);
+        margin-bottom: 1rem;
+    }
+    .page-subtitle {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .brand-section {
+        padding: 6rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .brand-section:nth-child(even) {
+        background-color: var(--bg-tertiary);
+    }
+    .brand-section:nth-child(odd) {
+        background-color: var(--bg-primary);
+    }
+    
+    .brand-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .brand-logo {
+        max-width: 250px;
+        max-height: 100px;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    
+    .brand-video-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto 3rem;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        background: #000;
+        aspect-ratio: 16/9;
+    }
+    .brand-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .brand-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .gallery-item {
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        background: var(--bg-tertiary);
+        border: 1px solid var(--border-color);
+    }
+    .gallery-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    .gallery-item:hover .gallery-img {
+        transform: scale(1.05);
+    }
+    
+    .explore-brand-btn-container {
+        text-align: center;
+        margin-top: 3rem;
+    }
+    
+    .explore-brand-btn-container .btn-secondary {
+        padding: 1.2rem 3.5rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        border: 1px solid var(--accent);
+        background: transparent;
+        color: var(--accent);
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+    .explore-brand-btn-container .btn-secondary:hover {
+        background: var(--accent);
+        color: var(--bg-primary);
+    }
+  </style>
+
+  <style>
+    .products-hero {
+      padding-top: 150px;
+      padding-bottom: 60px;
+      text-align: center;
+      background-color: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .products-title {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 6vw, 5rem);
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .products-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .shop-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 4rem 5%;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    
+    /* Mobile Floating Bar */
+    .mobile-filters-bar {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 5%;
+      right: 5%;
+      background: rgba(20, 20, 20, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 1rem;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      z-index: 100;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .mobile-filter-select {
+      flex: 1;
+      padding: 0.8rem 1rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem top 50%;
+      background-size: 0.65rem auto;
+      cursor: pointer;
+    }
+    .mobile-filter-select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .mobile-filter-select option {
+      background: #222;
+      color: #fff;
+    }
+
+    /* Sidebar Brands */
+    .sidebar {
+      background: var(--bg-secondary);
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      position: sticky;
+      top: 100px;
+    }
+    .sidebar-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .brand-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .brand-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      cursor: pointer;
+    }
+    .brand-checkbox {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+    .brand-label {
+      font-size: 1rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Main Content */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    /* Top Bar Categories */
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      background: var(--bg-secondary);
+      padding: 1rem 2rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+    }
+    .top-bar-title {
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-right: 1rem;
+    }
+    .category-btn {
+      padding: 0.6rem 1.5rem;
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+    .category-btn.active, .category-btn:hover {
+      background: var(--accent);
+      color: var(--bg-primary);
+      border-color: var(--accent);
+    }
+
+    /* Product Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .product-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    .product-image-container {
+      position: relative;
+      aspect-ratio: 1;
+      padding: 0;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .product-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.6s var(--ease);
+    }
+    .product-card:hover .product-image {
+      transform: scale(1.05);
+    }
+    
+    /* Pills */
+    .pills-container {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 2;
+    }
+    .pill {
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    .pill-brand {
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+    }
+    .pill-category {
+      background: var(--accent);
+      color: var(--bg-primary);
+    }
+    
+    /* Details & CTA */
+    .product-details {
+      padding: 1.5rem;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex-grow: 1;
+    }
+    .product-name {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin: 0;
+      line-height: 1.3;
+    }
+    .enquire-btn {
+      display: inline-block;
+      text-align: center;
+      padding: 0.8rem 1rem;
+      background-color: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease;
+      margin-top: auto;
+    }
+    .enquire-btn:hover {
+      background-color: var(--accent);
+      color: var(--bg-primary);
+    }
+
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+    }
+    .page-btn {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+    .page-btn.active {
+      background: var(--accent);
+      color: var(--bg-primary);
+      border-color: var(--accent);
+    }
+    .page-btn:hover:not(:disabled) {
+      background: var(--border-color);
+    }
+    .page-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .page-text {
+      padding: 0 1rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+    
+    .no-results {
+      text-align: center;
+      padding: 4rem;
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      grid-column: 1 / -1;
+    }
+
+    @media (max-width: 900px) {
+      .shop-container {
+        grid-template-columns: 1fr;
+        padding-bottom: 120px; /* Space for mobile floating bar */
+      }
+      .sidebar, .top-bar {
+        display: none;
+      }
+      .mobile-filters-bar {
+        display: flex !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-outline"></div>
+
+  <!-- Global Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="Homestudiologo.png" alt="Home Studio Surat" class="logo-img">
+      </a>
+      
+      <nav class="nav-menu">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="products.html" class="nav-link">Products</a>
+          <!-- Fixed Full-Width Mega Menu -->
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h4 class="mega-column-title">CP Fittings</h4>
+              <ul class="mega-list">
+                <li><a href="bathroom-fittings-products.html">Bathroom Fittings</a></li>
+                <li><a href="kitchen-sink-products.html">Kitchen Sink</a></li>
+                <li><a href="sanitaryware-products.html">Sanitaryware</a></li>
+                <li><a href="steam-sauna-products.html">Steam & Sauna System</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4 class="mega-column-title">Tiles</h4>
+              <ul class="mega-list">
+                <li><a href="domestic-tiles-products.html">Domestic Tiles</a></li>
+                <li><a href="imported-tiles-products.html">Imported Tiles</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4 class="mega-column-title">Windows</h4>
+              <ul class="mega-list">
+                <li><a href="#">Premium Windows</a></li>
+              </ul>
+            </div>
+            <div class="mega-featured">
+              <h4 class="mega-column-title">The Showroom</h4>
+              <img src="images/showroom-interior.jpg" alt="Showroom Preview" class="mega-featured-img">
+              <p class="mega-featured-text">Browse live demonstration shower and wellness spa zones in Surat.</p>
+              <a href="showroom.html" class="text-gold" style="font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase;">Explore Showroom →</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nav-item">
+          <a href="bathroom-fittings.html" class="nav-link">Brands</a>
+          <div class="mega-menu">
+            <div class="mega-column" style="grid-column: span 1;">
+              <h4 class="mega-column-title">Partner Brands</h4>
+              <p class="mega-featured-text" style="margin-bottom: 2rem;">We house curated curations of premium international brands under one exclusive roof.</p>
+              <a href="bathroom-fittings.html" class="btn-secondary" style="padding: 0.8rem 1.6rem; font-size: 0.75rem;">Brand Directory</a>
+            </div>
+            <div style="grid-column: span 3;">
+              <h4 class="mega-column-title">Featured Global Labels</h4>
+              <div class="mega-brand-grid">
+                <a href="brand-artize.html" class="mega-brand-item">ARTIZE</a>
+                <a href="brand-axor.html" class="mega-brand-item">AXOR</a>
+                <a href="brand-blanco.html" class="mega-brand-item">BLANCO</a>
+                <a href="brand-carysil.html" class="mega-brand-item">CARYSIL</a>
+                <a href="brand-geberit.html" class="mega-brand-item">GEBERIT</a>
+                <a href="brand-grohe.html" class="mega-brand-item">GROHE</a>
+                <a href="brand-hansgrohe.html" class="mega-brand-item">HANSGROHE</a>
+                <a href="brand-jaquar.html" class="mega-brand-item">JAQUAR</a>
+                <a href="brand-oyster.html" class="mega-brand-item">OYSTER</a>
+                <a href="brand-stiebel.html" class="mega-brand-item">STIEBEL</a>
+                <a href="brand-tece.html" class="mega-brand-item">TECE</a>
+                <a href="brand-toto.html" class="mega-brand-item">TOTO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nav-item">
+          <a href="showroom.html" class="nav-link">Showroom</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </nav>
+      
+      <div class="nav-controls">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        
+        <div class="hamburger" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Drawer -->
+  <div class="mobile-drawer">
+            <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      
+      <!-- Products Accordion -->
+      <div class="mobile-nav-item-accordion">
+        <div class="mobile-nav-accordion-header">
+          <a href="products.html" class="mobile-nav-link" style="color: inherit; text-decoration: none;">Products</a>
+          <button type="button" class="mobile-accordion-btn" aria-label="Toggle Products Submenu">+</button>
+        </div>
+        <div class="mobile-nav-accordion-body">
+          <div class="mobile-submenu-group" style="margin-bottom: 0.5rem;">
+            <a href="products.html" class="mobile-submenu-link text-gold" style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; display: block;">Browse All Collections Hub →</a>
+          </div>
+
+          <!-- Nested Accordion: CP Fittings -->
+          <div class="mobile-nav-item-accordion nested-accordion" style="margin-bottom: 0.8rem;">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">CP Fittings</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle CP Fittings">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="bathroom-fittings-products.html" class="mobile-submenu-link">Bathroom Fittings</a>
+              <a href="kitchen-sink-products.html" class="mobile-submenu-link">Kitchen Sinks</a>
+              <a href="sanitaryware-products.html" class="mobile-submenu-link">Sanitaryware</a>
+              <a href="steam-sauna-products.html" class="mobile-submenu-link">Steam & Sauna Systems</a>
+            </div>
+          </div>
+
+          <!-- Nested Accordion: Tiles -->
+          <div class="mobile-nav-item-accordion nested-accordion" style="margin-bottom: 0.8rem;">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">Tiles</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle Tiles">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="domestic-tiles-products.html" class="mobile-submenu-link">Domestic Tiles</a>
+              <a href="imported-tiles-products.html" class="mobile-submenu-link">Imported Tiles</a>
+            </div>
+          </div>
+
+          <!-- Nested Accordion: Windows -->
+          <div class="mobile-nav-item-accordion nested-accordion">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">Windows</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle Windows">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="contact.html?inquiry=Windows-Systems" class="mobile-submenu-link">Premium Windows</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brands Accordion -->
+      <div class="mobile-nav-item-accordion">
+        <div class="mobile-nav-accordion-header">
+          <a href="bathroom-fittings.html" class="mobile-nav-link">Brands</a>
+          <button class="mobile-accordion-btn" aria-label="Toggle Brands Submenu">+</button>
+        </div>
+        <div class="mobile-nav-accordion-body">
+          <div class="mobile-submenu-group" style="margin-bottom: 0.5rem;">
+            <a href="bathroom-fittings.html" class="mobile-submenu-link text-gold" style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; display: block;">Brand Directory →</a>
+          </div>
+          
+          <a href="brand-artize.html" class="mobile-submenu-link">ARTIZE</a>
+              <a href="brand-axor.html" class="mobile-submenu-link">AXOR</a>
+              <a href="brand-blanco.html" class="mobile-submenu-link">BLANCO</a>
+              <a href="brand-carysil.html" class="mobile-submenu-link">CARYSIL</a>
+              <a href="brand-geberit.html" class="mobile-submenu-link">GEBERIT</a>
+              <a href="brand-grohe.html" class="mobile-submenu-link">GROHE</a>
+              <a href="brand-hansgrohe.html" class="mobile-submenu-link">HANSGROHE</a>
+              <a href="brand-jaquar.html" class="mobile-submenu-link">JAQUAR</a>
+              <a href="brand-oyster.html" class="mobile-submenu-link">OYSTER</a>
+              <a href="brand-stiebel.html" class="mobile-submenu-link">STIEBEL</a>
+              <a href="brand-tece.html" class="mobile-submenu-link">TECE</a>
+              <a href="brand-toto.html" class="mobile-submenu-link">TOTO</a>
+        </div>
+      </div>
+
+      <a href="showroom.html" class="mobile-nav-link">Showroom</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-footer-col">
+        <p style="font-weight: 600; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Home Studio Surat</p>
+        <p>Shiv Shambhu Ind. Estate, 37-B,</p>
+        <p>Udhana-Magdalla Road, Surat</p>
+      </div>
+      <div class="mobile-footer-col" style="text-align: right;">
+        <p style="font-weight: 600; margin-bottom: 0.5rem;">Landline</p>
+        <p>(0261) 2631965</p>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-overlay"></div>
+  
+  <main>
+    <section class="products-hero">
+      <div class="container">
+        <h1 class="products-title">Sanitaryware</h1>
+        <p class="products-subtitle">Explore our exquisite collection of premium sanitaryware across world-class brands.</p>
+      </div>
+    </section>
+
+    <section class="shop-container">
+      <aside class="sidebar">
+        <h3 class="sidebar-title">Brands</h3>
+        <ul class="brand-list" id="brand-filters">
+          
+          <li class="brand-item">
+            <input type="checkbox" id="brand-Grohe" value="Grohe" class="brand-checkbox">
+            <label for="brand-Grohe" class="brand-label">Grohe</label>
+          </li>
+          <li class="brand-item">
+            <input type="checkbox" id="brand-Hansgrohe" value="Hansgrohe" class="brand-checkbox">
+            <label for="brand-Hansgrohe" class="brand-label">Hansgrohe</label>
+          </li>
+          <li class="brand-item">
+            <input type="checkbox" id="brand-Jaquar" value="Jaquar" class="brand-checkbox">
+            <label for="brand-Jaquar" class="brand-label">Jaquar</label>
+          </li>
+          <li class="brand-item">
+            <input type="checkbox" id="brand-Oyster" value="Oyster" class="brand-checkbox">
+            <label for="brand-Oyster" class="brand-label">Oyster</label>
+          </li>
+          <li class="brand-item">
+            <input type="checkbox" id="brand-Toto" value="Toto" class="brand-checkbox">
+            <label for="brand-Toto" class="brand-label">Toto</label>
+          </li>
+        </ul>
+      </aside>
+      
+      <div class="main-content">
+        <div class="top-bar" id="category-filters">
+          <span class="top-bar-title">Categories:</span>
+          <button class="category-btn active" data-category="all">All</button>
+          <button class="category-btn" data-category="Basin">Basin</button><button class="category-btn" data-category="Bathtub">Bathtub</button><button class="category-btn" data-category="WC">WC</button>
+        </div>
+        
+        <div class="products-grid" id="products-grid">
+          <!-- Products injected via JS -->
+        </div>
+        
+        <div class="pagination" id="pagination-controls">
+          <!-- Pagination injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobile Floating Filter Bar -->
+    <div class="mobile-filters-bar" id="mobile-filters-bar">
+      <select id="mobile-category-select" class="mobile-filter-select">
+        <option value="all">Categories</option>
+        <option value="Basin">Basin</option><option value="Bathtub">Bathtub</option><option value="WC">WC</option>
+      </select>
+      <select id="mobile-brand-select" class="mobile-filter-select">
+        <option value="all">Brands</option>
+        <option value="Grohe">Grohe</option><option value="Hansgrohe">Hansgrohe</option><option value="Jaquar">Jaquar</option><option value="Oyster">Oyster</option><option value="Toto">Toto</option>
+      </select>
+    </div>
+  </main>
+<footer>
+    <div class="container footer-grid">
+      <div>
+        <img src="Homestudiologo.png" alt="Home Studio Surat Logo" class="footer-logo-img">
+        <p class="footer-brand-desc">
+          Surat's premium lifestyle destination for luxury CP fittings, tiles, sanitary ware, wellness steam, sauna & spas. Curating elite global brands since 2001.
+        </p>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title">Collections</h4>
+        <ul class="footer-links">
+          <li><a href="bathroom-fittings.html">Bathroom Fittings</a></li>
+          <li><a href="products.html?cat=sanitary">Sanitary Ware</a></li>
+          <li><a href="products.html?cat=tiles">Ceramic & Marble Tiles</a></li>
+          <li><a href="products.html?cat=wellness">Steam, Sauna & Spa</a></li>
+          <li><a href="products.html?cat=windows">Premium Windows</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="showroom.html">Surat Showroom</a></li>
+          <li><a href="bathroom-fittings.html">Global Brands</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+            <div>
+        <h4 class="footer-col-title">Locations</h4>
+        <ul class="footer-links">
+          <li><a href="luxury-home-studio-mumbai.html">Mumbai</a></li>
+          <li><a href="luxury-home-studio-delhi.html">Delhi</a></li>
+          <li><a href="luxury-home-studio-bangalore.html">Bangalore</a></li>
+          <li><a href="luxury-home-studio-hyderabad.html">Hyderabad</a></li>
+          <li><a href="luxury-home-studio-ahmedabad.html">Ahmedabad</a></li>
+          <li><a href="luxury-home-studio-chennai.html">Chennai</a></li>
+          <li><a href="luxury-home-studio-kolkata.html">Kolkata</a></li>
+          <li><a href="luxury-home-studio-pune.html">Pune</a></li>
+          <li><a href="luxury-home-studio-jaipur.html">Jaipur</a></li>
+          <li><a href="luxury-home-studio-surat.html">Surat</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Experience Center</h4>
+        <p class="footer-newsletter-text" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">
+          Shiv Shambhu Ind. Estate, 37-B,<br>
+          Udhana - Magdalla Road, Surat,<br>
+          Gujarat 395002
+        </p>
+        <p style="font-size: 0.9rem; color: var(--text-primary); font-weight: 500; margin-bottom: 1.5rem;">
+          Landline: (0261) 2631965
+        </p>
+        <h4 class="footer-col-title" style="margin-bottom: 0.8rem; font-size: 0.75rem;">Newsletter</h4>
+        <form class="newsletter-form" action="#" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+          <input class="newsletter-input" type="email" placeholder="Enter your email address" required aria-label="Newsletter email">
+          <button class="newsletter-btn" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Home Studio (formerly Studio Ceramic). All Rights Reserved. Luxury Experience Center, Surat.</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link">Instagram</a>
+        <a href="#" class="footer-social-link">Pinterest</a>
+        <a href="#" class="footer-social-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=6"></script>
+</body>
+</html>
+
+  <script>
+    const productsData = [{"category": "Basin", "brand": "Grohe", "image": "CP/Sanitaryware /Basin/Grohe/Grohe_Plus_Teilmilieu_Purity_beautyLayout_4_3_4_3.jpg", "name": "Grohe Plus Teilmilieu Purity Beautylayout 4 3 4 3"}, {"category": "Basin", "brand": "Grohe", "image": "CP/Sanitaryware /Basin/Grohe/images.jpg", "name": "Images"}, {"category": "Basin", "brand": "Grohe", "image": "CP/Sanitaryware /Basin/Grohe/images(1).jpg", "name": "Images(1)"}, {"category": "Basin", "brand": "Grohe", "image": "CP/Sanitaryware /Basin/Grohe/img-e0465.jpg", "name": "Img E0465"}, {"category": "Basin", "brand": "Grohe", "image": "CP/Sanitaryware /Basin/Grohe/Plus_Teilmilieu_Cube_RAW_Retouch_4_3_4_3.jpg", "name": "Plus Teilmilieu Cube Raw Retouch 4 3 4 3"}, {"category": "Basin", "brand": "Grohe", "image": "CP/Sanitaryware /Basin/Grohe/ZZH_T23445B01_001_01_21_9_21_9.jpg", "name": "Zzh T23445B01 001 01 21 9 21 9"}, {"category": "Basin", "brand": "Hansgrohe", "image": "CP/Sanitaryware /Basin/Hansgrohe /2f7a1ede199cabcda85fd13fa01caaf1.jpg", "name": "2F7A1Ede199Cabcda85Fd13Fa01Caaf1"}, {"category": "Basin", "brand": "Hansgrohe", "image": "CP/Sanitaryware /Basin/Hansgrohe /har03033.png", "name": "Har03033"}, {"category": "Basin", "brand": "Hansgrohe", "image": "CP/Sanitaryware /Basin/Hansgrohe /har04478.png", "name": "Har04478"}, {"category": "Basin", "brand": "Hansgrohe", "image": "CP/Sanitaryware /Basin/Hansgrohe /images.jpg", "name": "Images"}, {"category": "Basin", "brand": "Hansgrohe", "image": "CP/Sanitaryware /Basin/Hansgrohe /xelu-q_tecturis-e_matt-blackpart-ambiance_4x3.jpg", "name": "Xelu Q Tecturis E Matt Blackpart Ambiance 4X3"}, {"category": "Basin", "brand": "Hansgrohe", "image": "CP/Sanitaryware /Basin/Hansgrohe /xelu-q_washplace_towel-holder-and-shelf_4x3.jpg", "name": "Xelu Q Washplace Towel Holder And Shelf 4X3"}, {"category": "Basin", "brand": "Jaquar", "image": "CP/Sanitaryware /Basin/Jaquar/0043759_ARIA-375x450.jpeg", "name": "0043759 Aria 375X450"}, {"category": "Basin", "brand": "Jaquar", "image": "CP/Sanitaryware /Basin/Jaquar/0043765_D_Arc-375x450.jpeg", "name": "0043765 D Arc 375X450"}, {"category": "Basin", "brand": "Jaquar", "image": "CP/Sanitaryware /Basin/Jaquar/0043769_Florotine-375x450.jpeg", "name": "0043769 Florotine 375X450"}, {"category": "Basin", "brand": "Jaquar", "image": "CP/Sanitaryware /Basin/Jaquar/basin-mixture.jpeg", "name": "Basin Mixture"}, {"category": "Basin", "brand": "Jaquar", "image": "CP/Sanitaryware /Basin/Jaquar/product-jpeg.jpg", "name": "Product Jpeg"}, {"category": "Basin", "brand": "Jaquar", "image": "CP/Sanitaryware /Basin/Jaquar/white-jaquar-wash-basin-291.jpg", "name": "White Jaquar Wash Basin 291"}, {"category": "Basin", "brand": "Toto", "image": "CP/Sanitaryware /Basin/Toto/1196x956_8778_3e7c0dc138e98930afd307fe4c53d659_17397895503.jpg", "name": "1196X956 8778 3E7C0Dc138E98930Afd307Fe4C53D659 17397895503"}, {"category": "Basin", "brand": "Toto", "image": "CP/Sanitaryware /Basin/Toto/cphpaneo60sa.jpg", "name": "Cphpaneo60Sa"}, {"category": "Basin", "brand": "Toto", "image": "CP/Sanitaryware /Basin/Toto/images.jpg", "name": "Images"}, {"category": "Basin", "brand": "Toto", "image": "CP/Sanitaryware /Basin/Toto/images(1).jpg", "name": "Images(1)"}, {"category": "Basin", "brand": "Toto", "image": "CP/Sanitaryware /Basin/Toto/images(2).jpg", "name": "Images(2)"}, {"category": "Basin", "brand": "Toto", "image": "CP/Sanitaryware /Basin/Toto/images(3).jpg", "name": "Images(3)"}, {"category": "Bathtub", "brand": "Grohe", "image": "CP/Sanitaryware /Bathtub/Grohe/A shower that feels as good as it looks.\u062c\u0645\u0627\u0644 \u0641\u064a \u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644\u060c \u0648\u0627\u0646\u062a\u0639\u0627\u0634 \u0641\u064a \u0643\u0644 \u0627\u0633\u062a\u062e\u062f\u0627\u0645.#GROHETempesta25.jpg", "name": "A Shower That Feels As Good As It Looks.\u062c\u0645\u0627\u0644 \u0641\u064a \u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644\u060c \u0648\u0627\u0646\u062a\u0639\u0627\u0634 \u0641\u064a \u0643\u0644 \u0627\u0633\u062a\u062e\u062f\u0627\u0645.#Grohetempesta25"}, {"category": "Bathtub", "brand": "Grohe", "image": "CP/Sanitaryware /Bathtub/Grohe/Choosing a complete bathroom just got a lot easier with GROHE Perfect Match! If youve ever look.jpg", "name": "Choosing A Complete Bathroom Just Got A Lot Easier With Grohe Perfect Match! If Youve Ever Look"}, {"category": "Bathtub", "brand": "Grohe", "image": "CP/Sanitaryware /Bathtub/Grohe/Designing the perfect bathroom can be overwhelming because of the wide variety of products avail.jpg", "name": "Designing The Perfect Bathroom Can Be Overwhelming Because Of The Wide Variety Of Products Avail"}, {"category": "Bathtub", "brand": "Grohe", "image": "CP/Sanitaryware /Bathtub/Grohe/Extravagant, impeccably designed GROHE basin mixers feature prominently in Sofitel Tamuda Bay\u2019s .jpg", "name": "Extravagant, Impeccably Designed Grohe Basin Mixers Feature Prominently In Sofitel Tamuda Bay\u2019S "}, {"category": "Bathtub", "brand": "Grohe", "image": "CP/Sanitaryware /Bathtub/Grohe/Immerse yourself in the essential luxury of the GROHE Essence Bath and elevate your summer exper.jpg", "name": "Immerse Yourself In The Essential Luxury Of The Grohe Essence Bath And Elevate Your Summer Exper"}, {"category": "Bathtub", "brand": "Grohe", "image": "CP/Sanitaryware /Bathtub/Grohe/Let the cool breeze in and a warm bath relax you. How are you enjoying the weather\u0627\u0633\u062a\u0645\u062a\u0639 \u0628\u0627\u0644\u0646\u0633\u064a\u0645.jpg", "name": "Let The Cool Breeze In And A Warm Bath Relax You. How Are You Enjoying The Weather\u0627\u0633\u062a\u0645\u062a\u0639 \u0628\u0627\u0644\u0646\u0633\u064a\u0645"}, {"category": "Bathtub", "brand": "Jaquar", "image": "CP/Sanitaryware /Bathtub/Jaquar/Because even paradise deserves a little drama.#Jaquar #JaquarIndia #JaquarBathrooms #BathroomGoa.jpg", "name": "Because Even Paradise Deserves A Little Drama.#Jaquar #Jaquarindia #Jaquarbathrooms #Bathroomgoa"}, {"category": "Bathtub", "brand": "Jaquar", "image": "CP/Sanitaryware /Bathtub/Jaquar/For those who dream in gold and wake to the wind.#Jaquar #JaquarIndia #JaquarBathrooms #TheGloba.jpg", "name": "For Those Who Dream In Gold And Wake To The Wind.#Jaquar #Jaquarindia #Jaquarbathrooms #Thegloba"}, {"category": "Bathtub", "brand": "Jaquar", "image": "CP/Sanitaryware /Bathtub/Jaquar/Tell us which mood speaks to you in the comments below \ud83d\udc47Left to right- Moroccon Dreams - Desert.jpg", "name": "Tell Us Which Mood Speaks To You In The Comments Below \ud83d\udc47Left To Right  Moroccon Dreams   Desert"}, {"category": "Bathtub", "brand": "Jaquar", "image": "CP/Sanitaryware /Bathtub/Jaquar/Warm pendant lights cast a gentle glow over rich wooden flooring, creating a bath space that fee.jpg", "name": "Warm Pendant Lights Cast A Gentle Glow Over Rich Wooden Flooring, Creating A Bath Space That Fee"}, {"category": "Bathtub", "brand": "Jaquar", "image": "CP/Sanitaryware /Bathtub/Jaquar/Wood textures and LED downlights combine in a bath space designed for the senses. Layers of text.jpg", "name": "Wood Textures And Led Downlights Combine In A Bath Space Designed For The Senses. Layers Of Text"}, {"category": "Bathtub", "brand": "Jaquar", "image": "CP/Sanitaryware /Bathtub/Jaquar/Wood textures and LED downlights combine in a bath space designed for the senses. Layers of text(1).jpg", "name": "Wood Textures And Led Downlights Combine In A Bath Space Designed For The Senses. Layers Of Text(1)"}, {"category": "Bathtub", "brand": "Oyster", "image": "CP/Sanitaryware /Bathtub/Oyster/Caspian by Oyster \u2014 Where Luxury Meets Serenity \u2728Escape the ordinary and immerse yourself in a w.jpg", "name": "Caspian By Oyster \u2014 Where Luxury Meets Serenity \u2728Escape The Ordinary And Immerse Yourself In A W"}, {"category": "Bathtub", "brand": "Oyster", "image": "CP/Sanitaryware /Bathtub/Oyster/Elegant spa setting featuring an Oyster luxury hydrotherapy jacuzzi bathtub set on a refined woo.jpg", "name": "Elegant Spa Setting Featuring An Oyster Luxury Hydrotherapy Jacuzzi Bathtub Set On A Refined Woo"}, {"category": "Bathtub", "brand": "Oyster", "image": "CP/Sanitaryware /Bathtub/Oyster/Experience ultimate luxury with the sleek Oyster Lifestyle bathtub, blending minimalist design a.jpg", "name": "Experience Ultimate Luxury With The Sleek Oyster Lifestyle Bathtub, Blending Minimalist Design A"}, {"category": "Bathtub", "brand": "Oyster", "image": "CP/Sanitaryware /Bathtub/Oyster/Not a vacation.Just the kind of bathroom you come home to when luxury becomes a lifestyle. \u2728Soft.jpg", "name": "Not A Vacation.Just The Kind Of Bathroom You Come Home To When Luxury Becomes A Lifestyle. \u2728Soft"}, {"category": "Bathtub", "brand": "Oyster", "image": "CP/Sanitaryware /Bathtub/Oyster/Unwind in luxury under the city lights, an evening of serene indulgence in our rooftop hot tub.#.jpg", "name": "Unwind In Luxury Under The City Lights, An Evening Of Serene Indulgence In Our Rooftop Hot Tub.#"}, {"category": "Bathtub", "brand": "Toto", "image": "CP/Sanitaryware /Bathtub/Toto/02_www.gb_.toto_.com_Recline_Comfort_Square_Flotation_bathtub_from\u00a37320.jpg", "name": "02 Www.Gb .Toto .Com Recline Comfort Square Flotation Bathtub From\u00a37320"}, {"category": "Bathtub", "brand": "Toto", "image": "CP/Sanitaryware /Bathtub/Toto/1b4f718811e68736b056f6cc3a690fe2.jpg", "name": "1B4F718811E68736B056F6Cc3A690Fe2"}, {"category": "Bathtub", "brand": "Toto", "image": "CP/Sanitaryware /Bathtub/Toto/20230808133139FZCPYXJB.jpg", "name": "20230808133139Fzcpyxjb"}, {"category": "Bathtub", "brand": "Toto", "image": "CP/Sanitaryware /Bathtub/Toto/81x11jaViqL._AC_UF894,1000_QL80_.jpg", "name": "81X11Javiql. Ac Uf894,1000 Ql80 "}, {"category": "Bathtub", "brand": "Toto", "image": "CP/Sanitaryware /Bathtub/Toto/bath-tub-500x500.jpg", "name": "Bath Tub 500X500"}, {"category": "Bathtub", "brand": "Toto", "image": "CP/Sanitaryware /Bathtub/Toto/bathtub-500x500.jpg", "name": "Bathtub 500X500"}, {"category": "WC", "brand": "Grohe", "image": "CP/Sanitaryware /WC/Grohe/67-53-6-aps-744-plantex-74-original-imahm4bg5yx3emtu.jpeg", "name": "67 53 6 Aps 744 Plantex 74 Original Imahm4Bg5Yx3Emtu"}, {"category": "WC", "brand": "Grohe", "image": "CP/Sanitaryware /WC/Grohe/images.jpg", "name": "Images"}, {"category": "WC", "brand": "Grohe", "image": "CP/Sanitaryware /WC/Grohe/SensiaArena_Gold_Flush_plate_4_3.jpg", "name": "Sensiaarena Gold Flush Plate 4 3"}, {"category": "WC", "brand": "Grohe", "image": "CP/Sanitaryware /WC/Grohe/ZZH_T102485J03_000_01.jpg", "name": "Zzh T102485J03 000 01"}, {"category": "WC", "brand": "Hansgrohe", "image": "CP/Sanitaryware /WC/Hansgrohe /01025180-1.jpg", "name": "01025180 1"}, {"category": "WC", "brand": "Hansgrohe", "image": "CP/Sanitaryware /WC/Hansgrohe /153__har09017_tif.jpg", "name": "153  Har09017 Tif"}, {"category": "WC", "brand": "Hansgrohe", "image": "CP/Sanitaryware /WC/Hansgrohe /153__har10462_tif.jpg", "name": "153  Har10462 Tif"}, {"category": "WC", "brand": "Hansgrohe", "image": "CP/Sanitaryware /WC/Hansgrohe /Elevate your bathrooms elegance and ease with EluPura toilets from hansgrohe. \ud83d\udebd\u2728 Designed to s.jpg", "name": "Elevate Your Bathrooms Elegance And Ease With Elupura Toilets From Hansgrohe. \ud83d\udebd\u2728 Designed To S"}, {"category": "WC", "brand": "Jaquar", "image": "CP/Sanitaryware /WC/Jaquar/0059257_rimless-wall-hung-wc_960.jpeg", "name": "0059257 Rimless Wall Hung Wc 960"}, {"category": "WC", "brand": "Jaquar", "image": "CP/Sanitaryware /WC/Jaquar/Automatic-Flush-Sensor-Open-Intelligent-Wc-Commode-Toilet-Bowl-One-Piece-Electric-Bathroom-Bidet-Smart-Toilet.webp", "name": "Automatic Flush Sensor Open Intelligent Wc Commode Toilet Bowl One Piece Electric Bathroom Bidet Smart Toilet"}, {"category": "WC", "brand": "Jaquar", "image": "CP/Sanitaryware /WC/Jaquar/jaquar-sls-blm-6953biufsm.png", "name": "Jaquar Sls Blm 6953Biufsm"}, {"category": "WC", "brand": "Jaquar", "image": "CP/Sanitaryware /WC/Jaquar/product-jpeg-500x500.jpg", "name": "Product Jpeg 500X500"}, {"category": "WC", "brand": "Toto", "image": "CP/Sanitaryware /WC/Toto/images.jpg", "name": "Images"}, {"category": "WC", "brand": "Toto", "image": "CP/Sanitaryware /WC/Toto/Neorest_NX1_Toilet_13.jpg", "name": "Neorest Nx1 Toilet 13"}, {"category": "WC", "brand": "Toto", "image": "CP/Sanitaryware /WC/Toto/NexusWASHLET_1571443393171-HR.jpg", "name": "Nexuswashlet 1571443393171 Hr"}, {"category": "WC", "brand": "Toto", "image": "CP/Sanitaryware /WC/Toto/TOTORXESET.jpg", "name": "Totorxeset"}];
+    const itemsPerPage = 15;
+    let currentPage = 1;
+    let currentCategory = 'all';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('products-grid');
+      const pagination = document.getElementById('pagination-controls');
+      const categoryBtns = document.querySelectorAll('.category-btn');
+      const brandCheckboxes = document.querySelectorAll('.brand-checkbox');
+      const mobileCategorySelect = document.getElementById('mobile-category-select');
+      const mobileBrandSelect = document.getElementById('mobile-brand-select');
+      
+      function renderProducts() {
+        // Determine active filters based on screen size
+        let activeCategory = currentCategory;
+        let selectedBrands = [];
+        
+        if (window.innerWidth <= 900) {
+            activeCategory = mobileCategorySelect.value;
+            if (mobileBrandSelect.value !== 'all') {
+                selectedBrands.push(mobileBrandSelect.value);
+            }
+        } else {
+            selectedBrands = Array.from(brandCheckboxes)
+                                  .filter(cb => cb.checked)
+                                  .map(cb => cb.value);
+        }
+                                  
+        let filtered = productsData.filter(p => {
+          const matchCat = activeCategory === 'all' || p.category === activeCategory;
+          const matchBrand = selectedBrands.length === 0 || selectedBrands.includes(p.brand);
+          return matchCat && matchBrand;
+        });
+        
+        // Paginate
+        const totalPages = Math.ceil(filtered.length / itemsPerPage);
+        if (currentPage > totalPages) currentPage = Math.max(1, totalPages);
+        
+        const start = (currentPage - 1) * itemsPerPage;
+        const paginated = filtered.slice(start, start + itemsPerPage);
+        
+        // Render Grid
+        grid.innerHTML = '';
+        if (paginated.length === 0) {
+          grid.innerHTML = '<div class="no-results">No products found matching your filters.</div>';
+        } else {
+          paginated.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.innerHTML = `
+              <div class="product-image-container">
+                <div class="pills-container">
+                  <span class="pill pill-brand">${p.brand}</span>
+                  <span class="pill pill-category">${p.category}</span>
+                </div>
+                <img src="${p.image}" alt="${p.name}" class="product-image" loading="lazy">
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">${p.name}</h3>
+                <a href="contact.html" class="enquire-btn">Enquire Now</a>
+              </div>
+            `;
+            grid.appendChild(card);
+          });
+        }
+        
+        // Render Pagination
+        pagination.innerHTML = '';
+        if (totalPages > 1) {
+          const prevBtn = document.createElement('button');
+          prevBtn.className = 'page-btn';
+          prevBtn.innerHTML = '&laquo;';
+          prevBtn.disabled = currentPage === 1;
+          prevBtn.onclick = () => { currentPage--; renderProducts(); window.scrollTo(0, 300); };
+          pagination.appendChild(prevBtn);
+          
+          // Page numbers
+          for (let i = 1; i <= totalPages; i++) {
+            if (totalPages > 7) {
+               if (i !== 1 && i !== totalPages && Math.abs(i - currentPage) > 1) {
+                  if (i === 2 || i === totalPages - 1) {
+                     const dots = document.createElement('span');
+                     dots.className = 'page-text';
+                     dots.textContent = '...';
+                     pagination.appendChild(dots);
+                  }
+                  continue;
+               }
+            }
+            
+            const btn = document.createElement('button');
+            btn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+            btn.textContent = i;
+            btn.onclick = () => { currentPage = i; renderProducts(); window.scrollTo(0, 300); };
+            pagination.appendChild(btn);
+          }
+          
+          const nextBtn = document.createElement('button');
+          nextBtn.className = 'page-btn';
+          nextBtn.innerHTML = '&raquo;';
+          nextBtn.disabled = currentPage === totalPages;
+          nextBtn.onclick = () => { currentPage++; renderProducts(); window.scrollTo(0, 300); };
+          pagination.appendChild(nextBtn);
+        }
+      }
+      
+      // Event Listeners
+      categoryBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          categoryBtns.forEach(b => b.classList.remove('active'));
+          e.target.classList.add('active');
+          currentCategory = e.target.getAttribute('data-category');
+          currentPage = 1;
+          renderProducts();
+        });
+      });
+      
+      brandCheckboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+          currentPage = 1;
+          renderProducts();
+        });
+      });
+      
+      mobileCategorySelect.addEventListener('change', () => {
+        currentPage = 1;
+        renderProducts();
+      });
+      
+      mobileBrandSelect.addEventListener('change', () => {
+        currentPage = 1;
+        renderProducts();
+      });
+      
+      window.addEventListener('resize', () => {
+        renderProducts();
+      });
+      
+      // Initial render
+      renderProducts();
+    });
+  </script>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience Center Showroom | Home Studio Surat</title>
+  <meta name="description" content="Explore our state-of-the-art 19,500 sq.ft. showroom in Surat. Discover live displays of luxury wellness spas, architectural tiles, and premium sanitaryware setups.">
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <style>
+    .page-hero {
+        padding-top: 150px;
+        padding-bottom: 80px;
+        text-align: center;
+        background-color: var(--bg-secondary);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .page-title {
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 6vw, 5rem);
+        color: var(--accent);
+        margin-bottom: 1rem;
+    }
+    .page-subtitle {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    /* Showroom Filtering & Masonry */
+    .filter-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 3rem 0;
+    }
+    
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+    }
+    
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--accent);
+      color: var(--bg-primary);
+      border-color: var(--accent);
+    }
+    
+    .showroom-grid {
+      columns: 3 320px;
+      column-gap: 1.5rem;
+      padding: 2rem 0 6rem;
+    }
+    
+    .grid-item {
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      background: var(--bg-tertiary);
+      cursor: pointer;
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    
+    .grid-item.hide {
+      opacity: 0;
+      transform: scale(0.95);
+      position: absolute;
+      pointer-events: none;
+      visibility: hidden;
+    }
+    
+    .grid-img {
+      width: 100%;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    
+    .grid-item:hover .grid-img {
+      transform: scale(1.05);
+    }
+    
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+      opacity: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+      transition: opacity 0.4s ease;
+    }
+    
+    .grid-item:hover .grid-overlay {
+      opacity: 1;
+    }
+    
+    .grid-category {
+      color: var(--accent);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .lightbox-img {
+      max-width: 90%;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 2.5rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    
+    .lightbox-close:hover {
+      color: var(--accent);
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-outline"></div>
+
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="Homestudiologo.png" alt="Home Studio Surat" class="logo-img">
+      </a>
+      
+      <nav class="nav-menu">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="products.html" class="nav-link">Products</a>
+          <!-- Fixed Full-Width Mega Menu -->
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h4 class="mega-column-title">CP Fittings</h4>
+              <ul class="mega-list">
+                <li><a href="bathroom-fittings-products.html">Bathroom Fittings</a></li>
+                <li><a href="kitchen-sink-products.html">Kitchen Sink</a></li>
+                <li><a href="sanitaryware-products.html">Sanitaryware</a></li>
+                <li><a href="steam-sauna-products.html">Steam & Sauna System</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4 class="mega-column-title">Tiles</h4>
+              <ul class="mega-list">
+                <li><a href="domestic-tiles-products.html">Domestic Tiles</a></li>
+                <li><a href="imported-tiles-products.html">Imported Tiles</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4 class="mega-column-title">Windows</h4>
+              <ul class="mega-list">
+                <li><a href="#">Premium Windows</a></li>
+              </ul>
+            </div>
+            <div class="mega-featured">
+              <h4 class="mega-column-title">The Showroom</h4>
+              <img src="images/showroom-interior.jpg" alt="Showroom Preview" class="mega-featured-img">
+              <p class="mega-featured-text">Browse live demonstration shower and wellness spa zones in Surat.</p>
+              <a href="showroom.html" class="text-gold" style="font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase;">Explore Showroom →</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nav-item">
+          <a href="bathroom-fittings.html" class="nav-link">Brands</a>
+          <div class="mega-menu">
+            <div class="mega-column" style="grid-column: span 1;">
+              <h4 class="mega-column-title">Partner Brands</h4>
+              <p class="mega-featured-text" style="margin-bottom: 2rem;">We house curated curations of premium international brands under one exclusive roof.</p>
+              <a href="bathroom-fittings.html" class="btn-secondary" style="padding: 0.8rem 1.6rem; font-size: 0.75rem;">Brand Directory</a>
+            </div>
+            <div style="grid-column: span 3;">
+              <h4 class="mega-column-title">Featured Global Labels</h4>
+              <div class="mega-brand-grid">
+                <a href="brand-artize.html" class="mega-brand-item">ARTIZE</a>
+                <a href="brand-axor.html" class="mega-brand-item">AXOR</a>
+                <a href="brand-blanco.html" class="mega-brand-item">BLANCO</a>
+                <a href="brand-carysil.html" class="mega-brand-item">CARYSIL</a>
+                <a href="brand-geberit.html" class="mega-brand-item">GEBERIT</a>
+                <a href="brand-grohe.html" class="mega-brand-item">GROHE</a>
+                <a href="brand-hansgrohe.html" class="mega-brand-item">HANSGROHE</a>
+                <a href="brand-jaquar.html" class="mega-brand-item">JAQUAR</a>
+                <a href="brand-oyster.html" class="mega-brand-item">OYSTER</a>
+                <a href="brand-stiebel.html" class="mega-brand-item">STIEBEL</a>
+                <a href="brand-tece.html" class="mega-brand-item">TECE</a>
+                <a href="brand-toto.html" class="mega-brand-item">TOTO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nav-item">
+          <a href="showroom.html" class="nav-link">Showroom</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </nav>
+      
+      <div class="nav-controls">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        
+        <div class="hamburger" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="mobile-drawer">
+            <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      
+      <!-- Products Accordion -->
+      <div class="mobile-nav-item-accordion">
+        <div class="mobile-nav-accordion-header">
+          <a href="products.html" class="mobile-nav-link" style="color: inherit; text-decoration: none;">Products</a>
+          <button type="button" class="mobile-accordion-btn" aria-label="Toggle Products Submenu">+</button>
+        </div>
+        <div class="mobile-nav-accordion-body">
+          <div class="mobile-submenu-group" style="margin-bottom: 0.5rem;">
+            <a href="products.html" class="mobile-submenu-link text-gold" style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; display: block;">Browse All Collections Hub →</a>
+          </div>
+
+          <!-- Nested Accordion: CP Fittings -->
+          <div class="mobile-nav-item-accordion nested-accordion" style="margin-bottom: 0.8rem;">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">CP Fittings</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle CP Fittings">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="bathroom-fittings-products.html" class="mobile-submenu-link">Bathroom Fittings</a>
+              <a href="kitchen-sink-products.html" class="mobile-submenu-link">Kitchen Sinks</a>
+              <a href="sanitaryware-products.html" class="mobile-submenu-link">Sanitaryware</a>
+              <a href="steam-sauna-products.html" class="mobile-submenu-link">Steam & Sauna Systems</a>
+            </div>
+          </div>
+
+          <!-- Nested Accordion: Tiles -->
+          <div class="mobile-nav-item-accordion nested-accordion" style="margin-bottom: 0.8rem;">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">Tiles</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle Tiles">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="domestic-tiles-products.html" class="mobile-submenu-link">Domestic Tiles</a>
+              <a href="imported-tiles-products.html" class="mobile-submenu-link">Imported Tiles</a>
+            </div>
+          </div>
+
+          <!-- Nested Accordion: Windows -->
+          <div class="mobile-nav-item-accordion nested-accordion">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">Windows</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle Windows">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="contact.html?inquiry=Windows-Systems" class="mobile-submenu-link">Premium Windows</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brands Accordion -->
+      <div class="mobile-nav-item-accordion">
+        <div class="mobile-nav-accordion-header">
+          <a href="bathroom-fittings.html" class="mobile-nav-link">Brands</a>
+          <button class="mobile-accordion-btn" aria-label="Toggle Brands Submenu">+</button>
+        </div>
+        <div class="mobile-nav-accordion-body">
+          <div class="mobile-submenu-group" style="margin-bottom: 0.5rem;">
+            <a href="bathroom-fittings.html" class="mobile-submenu-link text-gold" style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; display: block;">Brand Directory →</a>
+          </div>
+          
+          <a href="brand-artize.html" class="mobile-submenu-link">ARTIZE</a>
+              <a href="brand-axor.html" class="mobile-submenu-link">AXOR</a>
+              <a href="brand-blanco.html" class="mobile-submenu-link">BLANCO</a>
+              <a href="brand-carysil.html" class="mobile-submenu-link">CARYSIL</a>
+              <a href="brand-geberit.html" class="mobile-submenu-link">GEBERIT</a>
+              <a href="brand-grohe.html" class="mobile-submenu-link">GROHE</a>
+              <a href="brand-hansgrohe.html" class="mobile-submenu-link">HANSGROHE</a>
+              <a href="brand-jaquar.html" class="mobile-submenu-link">JAQUAR</a>
+              <a href="brand-oyster.html" class="mobile-submenu-link">OYSTER</a>
+              <a href="brand-stiebel.html" class="mobile-submenu-link">STIEBEL</a>
+              <a href="brand-tece.html" class="mobile-submenu-link">TECE</a>
+              <a href="brand-toto.html" class="mobile-submenu-link">TOTO</a>
+        </div>
+      </div>
+
+      <a href="showroom.html" class="mobile-nav-link">Showroom</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-footer-col">
+        <p style="font-weight: 600; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Home Studio Surat</p>
+        <p>Shiv Shambhu Ind. Estate, 37-B,</p>
+        <p>Udhana-Magdalla Road, Surat</p>
+      </div>
+      <div class="mobile-footer-col" style="text-align: right;">
+        <p style="font-weight: 600; margin-bottom: 0.5rem;">Landline</p>
+        <p>(0261) 2631965</p>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-overlay"></div>
+  
+  <main style="margin-top: var(--header-height);">
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-tag" style="display: block; margin-bottom: 1rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.8rem; font-weight: 600;">The Experience Center</span>
+        <h1 class="page-title reveal">Home Studio Live</h1>
+        <p class="page-subtitle reveal" style="transition-delay: 0.1s;">
+          Explore our state-of-the-art 19,500 sq.ft. showroom in Surat. Discover live displays of luxury wellness spas, architectural tiles, and premium sanitaryware setups.
+        </p>
+      </div>
+    </section>
+
+    <!-- Showroom Grid Section -->
+    <section class="section-padding">
+      <div class="container">
+        
+        <div class="filter-container reveal" style="transition-delay: 0.2s;">
+          <button class="filter-btn active" data-filter="all">All Photos</button>
+          <button class="filter-btn" data-filter="exterior">Exterior</button>
+          <button class="filter-btn" data-filter="interior">Interior</button>
+          <button class="filter-btn" data-filter="tiles">Tiles Area</button>
+          <button class="filter-btn" data-filter="bathroom-fittings">Bathroom Fittings</button>
+          <button class="filter-btn" data-filter="kitchen-sinks">Kitchen Sinks</button>
+          <button class="filter-btn" data-filter="wellness">Steam & Sauna</button>
+        </div>
+
+        <div class="showroom-grid">
+
+          <div class="grid-item bathroom-fittings" onclick="openLightbox('assets/images/showroom/Bathfit.jpg')">
+            <img src="assets/images/showroom/Bathfit.jpg" alt="Bathroom Fittings" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Bathroom Fittings</span>
+            </div>
+          </div>
+
+          <div class="grid-item bathroom-fittings" onclick="openLightbox('assets/images/showroom/Bathfittings.jpg')">
+            <img src="assets/images/showroom/Bathfittings.jpg" alt="Bathroom Fittings" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Bathroom Fittings</span>
+            </div>
+          </div>
+
+          <div class="grid-item bathroom-fittings" onclick="openLightbox('assets/images/showroom/BathroomFittings.jpg')">
+            <img src="assets/images/showroom/BathroomFittings.jpg" alt="Bathroom Fittings" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Bathroom Fittings</span>
+            </div>
+          </div>
+
+          <div class="grid-item interior" onclick="openLightbox('assets/images/showroom/Entry.jpg')">
+            <img src="assets/images/showroom/Entry.jpg" alt="Interior Overview" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Interior Overview</span>
+            </div>
+          </div>
+
+          <div class="grid-item exterior" onclick="openLightbox('assets/images/showroom/Exterior.jpg')">
+            <img src="assets/images/showroom/Exterior.jpg" alt="Exterior View" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Exterior View</span>
+            </div>
+          </div>
+
+          <div class="grid-item kitchen-sinks" onclick="openLightbox('assets/images/showroom/Kitchensink.jpg')">
+            <img src="assets/images/showroom/Kitchensink.jpg" alt="Kitchen Sinks" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Kitchen Sinks</span>
+            </div>
+          </div>
+
+          <div class="grid-item bathroom-fittings" onclick="openLightbox('assets/images/showroom/ShowerFit.jpg')">
+            <img src="assets/images/showroom/ShowerFit.jpg" alt="Bathroom Fittings" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Bathroom Fittings</span>
+            </div>
+          </div>
+
+          <div class="grid-item wellness" onclick="openLightbox('assets/images/showroom/Spa-sauna.jpg')">
+            <img src="assets/images/showroom/Spa-sauna.jpg" alt="Steam & Sauna" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Steam & Sauna</span>
+            </div>
+          </div>
+
+          <div class="grid-item tiles" onclick="openLightbox('assets/images/showroom/Tiles.jpeg')">
+            <img src="assets/images/showroom/Tiles.jpeg" alt="Tiles Area" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Tiles Area</span>
+            </div>
+          </div>
+
+          <div class="grid-item tiles" onclick="openLightbox('assets/images/showroom/Tiles1.jpeg')">
+            <img src="assets/images/showroom/Tiles1.jpeg" alt="Tiles Area" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Tiles Area</span>
+            </div>
+          </div>
+
+          <div class="grid-item bathroom-fittings" onclick="openLightbox('assets/images/showroom/bathroomfit.jpg')">
+            <img src="assets/images/showroom/bathroomfit.jpg" alt="Bathroom Fittings" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Bathroom Fittings</span>
+            </div>
+          </div>
+
+          <div class="grid-item bathroom-fittings" onclick="openLightbox('assets/images/showroom/shower.jpg')">
+            <img src="assets/images/showroom/shower.jpg" alt="Bathroom Fittings" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Bathroom Fittings</span>
+            </div>
+          </div>
+
+          <div class="grid-item tiles" onclick="openLightbox('assets/images/showroom/tile.jpeg')">
+            <img src="assets/images/showroom/tile.jpeg" alt="Tiles Area" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Tiles Area</span>
+            </div>
+          </div>
+
+          <div class="grid-item tiles" onclick="openLightbox('assets/images/showroom/tiles_4.jpg')">
+            <img src="assets/images/showroom/tiles_4.jpg" alt="Tiles Area" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Tiles Area</span>
+            </div>
+          </div>
+
+          <div class="grid-item tiles" onclick="openLightbox('assets/images/showroom/tiles_8.jpeg')">
+            <img src="assets/images/showroom/tiles_8.jpeg" alt="Tiles Area" class="grid-img">
+            <div class="grid-overlay">
+              <span class="grid-category">Tiles Area</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="showroomLightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img src="" alt="Enlarged View" class="lightbox-img" id="lightboxImg">
+  </div>
+  
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <img src="Homestudiologo.png" alt="Home Studio Surat Logo" class="footer-logo-img">
+        <p class="footer-brand-desc">
+          Surat's premium lifestyle destination for luxury CP fittings, tiles, sanitary ware, wellness steam, sauna & spas. Curating elite global brands since 2001.
+        </p>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title">Collections</h4>
+        <ul class="footer-links">
+          <li><a href="bathroom-fittings.html">Bathroom Fittings</a></li>
+          <li><a href="products.html?cat=sanitary">Sanitary Ware</a></li>
+          <li><a href="products.html?cat=tiles">Ceramic & Marble Tiles</a></li>
+          <li><a href="products.html?cat=wellness">Steam, Sauna & Spa</a></li>
+          <li><a href="products.html?cat=windows">Premium Windows</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="showroom.html">Surat Showroom</a></li>
+          <li><a href="bathroom-fittings.html">Global Brands</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+            <div>
+        <h4 class="footer-col-title">Locations</h4>
+        <ul class="footer-links">
+          <li><a href="luxury-home-studio-mumbai.html">Mumbai</a></li>
+          <li><a href="luxury-home-studio-delhi.html">Delhi</a></li>
+          <li><a href="luxury-home-studio-bangalore.html">Bangalore</a></li>
+          <li><a href="luxury-home-studio-hyderabad.html">Hyderabad</a></li>
+          <li><a href="luxury-home-studio-ahmedabad.html">Ahmedabad</a></li>
+          <li><a href="luxury-home-studio-chennai.html">Chennai</a></li>
+          <li><a href="luxury-home-studio-kolkata.html">Kolkata</a></li>
+          <li><a href="luxury-home-studio-pune.html">Pune</a></li>
+          <li><a href="luxury-home-studio-jaipur.html">Jaipur</a></li>
+          <li><a href="luxury-home-studio-surat.html">Surat</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Experience Center</h4>
+        <p class="footer-newsletter-text" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">
+          Shiv Shambhu Ind. Estate, 37-B,<br>
+          Udhana - Magdalla Road, Surat,<br>
+          Gujarat 395002
+        </p>
+        <p style="font-size: 0.9rem; color: var(--text-primary); font-weight: 500; margin-bottom: 1.5rem;">
+          Landline: (0261) 2631965
+        </p>
+        <h4 class="footer-col-title" style="margin-bottom: 0.8rem; font-size: 0.75rem;">Newsletter</h4>
+        <form class="newsletter-form" action="#" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+          <input class="newsletter-input" type="email" placeholder="Enter your email address" required aria-label="Newsletter email">
+          <button class="newsletter-btn" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Home Studio (formerly Studio Ceramic). All Rights Reserved. Luxury Experience Center, Surat.</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link">Instagram</a>
+        <a href="#" class="footer-social-link">Pinterest</a>
+        <a href="#" class="footer-social-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=6"></script>
+  <script>
+    // Filtering logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active to clicked
+        btn.classList.add('active');
+        
+        const filterValue = btn.getAttribute('data-filter');
+        
+        gridItems.forEach(item => {
+          if (filterValue === 'all' || item.classList.contains(filterValue)) {
+            // Need to reset position static/relative for masonry to work 
+            item.classList.remove('hide');
+            // Give a tiny timeout so columns layout can adjust before opacity transition
+            setTimeout(() => {
+                item.style.position = 'relative';
+                item.style.visibility = 'visible';
+            }, 50);
+          } else {
+            item.classList.add('hide');
+          }
+        });
+      });
+    });
+
+    // Lightbox Logic
+    const lightbox = document.getElementById('showroomLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden'; // prevent background scrolling
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      setTimeout(() => {
+        lightboxImg.src = '';
+      }, 300);
+      document.body.style.overflow = '';
+    }
+
+    // Close on background click
+    lightbox.addEventListener('click', (e) => {
+      if(e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  </script>
+</body>
+</html>
+

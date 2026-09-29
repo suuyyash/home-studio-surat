@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imported Tiles | Home Studio Surat</title>
+  <meta name="description" content="Explore the legacy of Home Studio Surat, from our origins in 2001 to our current 19,500 sqft luxury experience center. Meet our founders Rajesh and Sanjay Patel.">
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    /* Custom styles for About page */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: var(--border-color);
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6rem;
+      position: relative;
+    }
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .timeline-dot {
+      width: 14px;
+      height: 14px;
+      background-color: var(--accent);
+      border: 3px solid var(--bg-primary);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+    .timeline-content {
+      width: 44%;
+      background-color: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+    }
+    .timeline-year {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+      font-weight: 300;
+      line-height: 1;
+    }
+    .timeline-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-item, .timeline-item:nth-child(even) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 45px;
+      }
+      .timeline-dot {
+        left: 20px;
+        transform: translateX(-50%);
+      }
+      .timeline-content {
+        width: 100%;
+        padding: 2.2rem;
+      }
+    }
+    
+    /* Founders Section */
+    .founders-section {
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      background-color: var(--bg-secondary);
+    }
+    .founders-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 4rem;
+    }
+    .founder-profile-card {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      background-color: var(--bg-tertiary);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .founder-info-block {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .founder-role {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+    .founder-name {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .founder-desc {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-weight: 300;
+      color: var(--text-secondary);
+    }
+    
+    @media (max-width: 768px) {
+      .founders-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .founder-info-block {
+        padding: 1.5rem;
+      }
+    }
+    
+    .founder-quote {
+      text-align: center;
+      max-width: 850px;
+      margin: 6rem auto 0;
+      padding: 4rem 2rem 0;
+      border-top: 1px solid var(--border-color);
+    }
+    .quote-mark {
+      font-family: var(--font-serif);
+      font-size: 5rem;
+      line-height: 0.1;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 2rem;
+    }
+    .quote-text {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--text-primary);
+      margin-bottom: 2rem;
+    }
+    .quote-author {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 3rem;
+      margin-top: 5rem;
+    }
+    .value-box {
+      border-left: 1px solid var(--accent);
+      padding-left: 2rem;
+    }
+    .value-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+
+  <style>
+    .page-hero {
+        padding-top: 150px;
+        padding-bottom: 80px;
+        text-align: center;
+        background-color: var(--bg-secondary);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .page-title {
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 6vw, 5rem);
+        color: var(--accent);
+        margin-bottom: 1rem;
+    }
+    .page-subtitle {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .brand-section {
+        padding: 6rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .brand-section:nth-child(even) {
+        background-color: var(--bg-tertiary);
+    }
+    .brand-section:nth-child(odd) {
+        background-color: var(--bg-primary);
+    }
+    
+    .brand-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .brand-logo {
+        max-width: 250px;
+        max-height: 100px;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    
+    .brand-video-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto 3rem;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        background: #000;
+        aspect-ratio: 16/9;
+    }
+    .brand-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .brand-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .gallery-item {
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        background: var(--bg-tertiary);
+        border: 1px solid var(--border-color);
+    }
+    .gallery-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    .gallery-item:hover .gallery-img {
+        transform: scale(1.05);
+    }
+    
+    .explore-brand-btn-container {
+        text-align: center;
+        margin-top: 3rem;
+    }
+    
+    .explore-brand-btn-container .btn-secondary {
+        padding: 1.2rem 3.5rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        border: 1px solid var(--accent);
+        background: transparent;
+        color: var(--accent);
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+    .explore-brand-btn-container .btn-secondary:hover {
+        background: var(--accent);
+        color: var(--bg-primary);
+    }
+  </style>
+
+  <style>
+    .products-hero {
+      padding-top: 150px;
+      padding-bottom: 60px;
+      text-align: center;
+      background-color: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .products-title {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 6vw, 5rem);
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .products-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .shop-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 4rem 5%;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    
+    /* Mobile Floating Bar */
+    .mobile-filters-bar {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 5%;
+      right: 5%;
+      background: rgba(20, 20, 20, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 1rem;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      z-index: 100;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .mobile-filter-select {
+      flex: 1;
+      padding: 0.8rem 1rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem top 50%;
+      background-size: 0.65rem auto;
+      cursor: pointer;
+    }
+    .mobile-filter-select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .mobile-filter-select option {
+      background: #222;
+      color: #fff;
+    }
+
+    /* Sidebar Brands */
+    .sidebar {
+      background: var(--bg-secondary);
+      padding: 2rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      position: sticky;
+      top: 100px;
+    }
+    .sidebar-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .brand-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .brand-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      cursor: pointer;
+    }
+    .brand-checkbox {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+    .brand-label {
+      font-size: 1rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Main Content */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    /* Top Bar Categories */
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      background: var(--bg-secondary);
+      padding: 1rem 2rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+    }
+    .top-bar-title {
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-right: 1rem;
+    }
+    .category-btn {
+      padding: 0.6rem 1.5rem;
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+    .category-btn.active, .category-btn:hover {
+      background: var(--accent);
+      color: var(--bg-primary);
+      border-color: var(--accent);
+    }
+
+    /* Product Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .product-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    .product-image-container {
+      position: relative;
+      aspect-ratio: 1;
+      padding: 0;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .product-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.6s var(--ease);
+    }
+    .product-card:hover .product-image {
+      transform: scale(1.05);
+    }
+    
+    /* Pills */
+    .pills-container {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 2;
+    }
+    .pill {
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    .pill-brand {
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+    }
+    .pill-category {
+      background: var(--accent);
+      color: var(--bg-primary);
+    }
+    
+    /* Details & CTA */
+    .product-details {
+      padding: 1.5rem;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex-grow: 1;
+    }
+    .product-name {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin: 0;
+      line-height: 1.3;
+    }
+    .enquire-btn {
+      display: inline-block;
+      text-align: center;
+      padding: 0.8rem 1rem;
+      background-color: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease;
+      margin-top: auto;
+    }
+    .enquire-btn:hover {
+      background-color: var(--accent);
+      color: var(--bg-primary);
+    }
+
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+    }
+    .page-btn {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+    .page-btn.active {
+      background: var(--accent);
+      color: var(--bg-primary);
+      border-color: var(--accent);
+    }
+    .page-btn:hover:not(:disabled) {
+      background: var(--border-color);
+    }
+    .page-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .page-text {
+      padding: 0 1rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+    
+    .no-results {
+      text-align: center;
+      padding: 4rem;
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      grid-column: 1 / -1;
+    }
+
+    @media (max-width: 900px) {
+      .shop-container {
+        grid-template-columns: 1fr;
+        padding-bottom: 120px; /* Space for mobile floating bar */
+      }
+      .sidebar, .top-bar {
+        display: none;
+      }
+      .mobile-filters-bar {
+        display: flex !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-outline"></div>
+
+  <!-- Global Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="Homestudiologo.png" alt="Home Studio Surat" class="logo-img">
+      </a>
+      
+      <nav class="nav-menu">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="products.html" class="nav-link">Products</a>
+          <!-- Fixed Full-Width Mega Menu -->
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h4 class="mega-column-title">CP Fittings</h4>
+              <ul class="mega-list">
+                <li><a href="bathroom-fittings-products.html">Bathroom Fittings</a></li>
+                <li><a href="kitchen-sink-products.html">Kitchen Sink</a></li>
+                <li><a href="sanitaryware-products.html">Sanitaryware</a></li>
+                <li><a href="steam-sauna-products.html">Steam & Sauna System</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4 class="mega-column-title">Tiles</h4>
+              <ul class="mega-list">
+                <li><a href="domestic-tiles-products.html">Domestic Tiles</a></li>
+                <li><a href="imported-tiles-products.html">Imported Tiles</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4 class="mega-column-title">Windows</h4>
+              <ul class="mega-list">
+                <li><a href="#">Premium Windows</a></li>
+              </ul>
+            </div>
+            <div class="mega-featured">
+              <h4 class="mega-column-title">The Showroom</h4>
+              <img src="images/showroom-interior.jpg" alt="Showroom Preview" class="mega-featured-img">
+              <p class="mega-featured-text">Browse live demonstration shower and wellness spa zones in Surat.</p>
+              <a href="showroom.html" class="text-gold" style="font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase;">Explore Showroom →</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nav-item">
+          <a href="bathroom-fittings.html" class="nav-link">Brands</a>
+          <div class="mega-menu">
+            <div class="mega-column" style="grid-column: span 1;">
+              <h4 class="mega-column-title">Partner Brands</h4>
+              <p class="mega-featured-text" style="margin-bottom: 2rem;">We house curated curations of premium international brands under one exclusive roof.</p>
+              <a href="bathroom-fittings.html" class="btn-secondary" style="padding: 0.8rem 1.6rem; font-size: 0.75rem;">Brand Directory</a>
+            </div>
+            <div style="grid-column: span 3;">
+              <h4 class="mega-column-title">Featured Global Labels</h4>
+              <div class="mega-brand-grid">
+                <a href="brand-artize.html" class="mega-brand-item">ARTIZE</a>
+                <a href="brand-axor.html" class="mega-brand-item">AXOR</a>
+                <a href="brand-blanco.html" class="mega-brand-item">BLANCO</a>
+                <a href="brand-carysil.html" class="mega-brand-item">CARYSIL</a>
+                <a href="brand-geberit.html" class="mega-brand-item">GEBERIT</a>
+                <a href="brand-grohe.html" class="mega-brand-item">GROHE</a>
+                <a href="brand-hansgrohe.html" class="mega-brand-item">HANSGROHE</a>
+                <a href="brand-jaquar.html" class="mega-brand-item">JAQUAR</a>
+                <a href="brand-oyster.html" class="mega-brand-item">OYSTER</a>
+                <a href="brand-stiebel.html" class="mega-brand-item">STIEBEL</a>
+                <a href="brand-tece.html" class="mega-brand-item">TECE</a>
+                <a href="brand-toto.html" class="mega-brand-item">TOTO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nav-item">
+          <a href="showroom.html" class="nav-link">Showroom</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </nav>
+      
+      <div class="nav-controls">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        
+        <div class="hamburger" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Drawer -->
+  <div class="mobile-drawer">
+            <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      
+      <!-- Products Accordion -->
+      <div class="mobile-nav-item-accordion">
+        <div class="mobile-nav-accordion-header">
+          <a href="products.html" class="mobile-nav-link" style="color: inherit; text-decoration: none;">Products</a>
+          <button type="button" class="mobile-accordion-btn" aria-label="Toggle Products Submenu">+</button>
+        </div>
+        <div class="mobile-nav-accordion-body">
+          <div class="mobile-submenu-group" style="margin-bottom: 0.5rem;">
+            <a href="products.html" class="mobile-submenu-link text-gold" style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; display: block;">Browse All Collections Hub →</a>
+          </div>
+
+          <!-- Nested Accordion: CP Fittings -->
+          <div class="mobile-nav-item-accordion nested-accordion" style="margin-bottom: 0.8rem;">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">CP Fittings</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle CP Fittings">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="bathroom-fittings-products.html" class="mobile-submenu-link">Bathroom Fittings</a>
+              <a href="kitchen-sink-products.html" class="mobile-submenu-link">Kitchen Sinks</a>
+              <a href="sanitaryware-products.html" class="mobile-submenu-link">Sanitaryware</a>
+              <a href="steam-sauna-products.html" class="mobile-submenu-link">Steam & Sauna Systems</a>
+            </div>
+          </div>
+
+          <!-- Nested Accordion: Tiles -->
+          <div class="mobile-nav-item-accordion nested-accordion" style="margin-bottom: 0.8rem;">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">Tiles</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle Tiles">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="domestic-tiles-products.html" class="mobile-submenu-link">Domestic Tiles</a>
+              <a href="imported-tiles-products.html" class="mobile-submenu-link">Imported Tiles</a>
+            </div>
+          </div>
+
+          <!-- Nested Accordion: Windows -->
+          <div class="mobile-nav-item-accordion nested-accordion">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">Windows</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle Windows">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="contact.html?inquiry=Windows-Systems" class="mobile-submenu-link">Premium Windows</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brands Accordion -->
+      <div class="mobile-nav-item-accordion">
+        <div class="mobile-nav-accordion-header">
+          <a href="bathroom-fittings.html" class="mobile-nav-link">Brands</a>
+          <button class="mobile-accordion-btn" aria-label="Toggle Brands Submenu">+</button>
+        </div>
+        <div class="mobile-nav-accordion-body">
+          <div class="mobile-submenu-group" style="margin-bottom: 0.5rem;">
+            <a href="bathroom-fittings.html" class="mobile-submenu-link text-gold" style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; display: block;">Brand Directory →</a>
+          </div>
+          
+          <a href="brand-artize.html" class="mobile-submenu-link">ARTIZE</a>
+              <a href="brand-axor.html" class="mobile-submenu-link">AXOR</a>
+              <a href="brand-blanco.html" class="mobile-submenu-link">BLANCO</a>
+              <a href="brand-carysil.html" class="mobile-submenu-link">CARYSIL</a>
+              <a href="brand-geberit.html" class="mobile-submenu-link">GEBERIT</a>
+              <a href="brand-grohe.html" class="mobile-submenu-link">GROHE</a>
+              <a href="brand-hansgrohe.html" class="mobile-submenu-link">HANSGROHE</a>
+              <a href="brand-jaquar.html" class="mobile-submenu-link">JAQUAR</a>
+              <a href="brand-oyster.html" class="mobile-submenu-link">OYSTER</a>
+              <a href="brand-stiebel.html" class="mobile-submenu-link">STIEBEL</a>
+              <a href="brand-tece.html" class="mobile-submenu-link">TECE</a>
+              <a href="brand-toto.html" class="mobile-submenu-link">TOTO</a>
+        </div>
+      </div>
+
+      <a href="showroom.html" class="mobile-nav-link">Showroom</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-footer-col">
+        <p style="font-weight: 600; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Home Studio Surat</p>
+        <p>Shiv Shambhu Ind. Estate, 37-B,</p>
+        <p>Udhana-Magdalla Road, Surat</p>
+      </div>
+      <div class="mobile-footer-col" style="text-align: right;">
+        <p style="font-weight: 600; margin-bottom: 0.5rem;">Landline</p>
+        <p>(0261) 2631965</p>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-overlay"></div>
+  
+  
+  <main>
+    <section class="products-hero">
+      <div class="container">
+        <h1 class="products-title">Imported Tiles</h1>
+        <p class="products-subtitle">Explore our exquisite collection of premium imported tiles across world-class global brands.</p>
+      </div>
+    </section>
+
+    <section class="shop-container">
+      <aside class="sidebar">
+        <h3 class="sidebar-title">Brands</h3>
+        <ul class="brand-list" id="brand-filters">
+          
+          <li class="brand-item">
+            <input type="checkbox" id="brand-CASABATH" value="CASABATH" class="brand-checkbox">
+            <label for="brand-CASABATH" class="brand-label">CASABATH</label>
+          </li>
+          <li class="brand-item">
+            <input type="checkbox" id="brand-DVG" value="DVG" class="brand-checkbox">
+            <label for="brand-DVG" class="brand-label">DVG</label>
+          </li>
+          <li class="brand-item">
+            <input type="checkbox" id="brand-EMIL-GROUP-" value="EMIL GROUP " class="brand-checkbox">
+            <label for="brand-EMIL-GROUP-" class="brand-label">EMIL GROUP </label>
+          </li>
+          <li class="brand-item">
+            <input type="checkbox" id="brand-KPM" value="KPM" class="brand-checkbox">
+            <label for="brand-KPM" class="brand-label">KPM</label>
+          </li>
+          <li class="brand-item">
+            <input type="checkbox" id="brand-MILAGRO" value="MILAGRO" class="brand-checkbox">
+            <label for="brand-MILAGRO" class="brand-label">MILAGRO</label>
+          </li>
+          <li class="brand-item">
+            <input type="checkbox" id="brand-SCPL" value="SCPL" class="brand-checkbox">
+            <label for="brand-SCPL" class="brand-label">SCPL</label>
+          </li>
+        </ul>
+      </aside>
+      
+      <div class="main-content">
+        
+        <div class="products-grid" id="products-grid">
+          <!-- Products injected via JS -->
+        </div>
+        
+        <div class="pagination" id="pagination-controls">
+          <!-- Pagination injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobile Floating Filter Bar -->
+    <div class="mobile-filters-bar" id="mobile-filters-bar">
+      <select id="mobile-brand-select" class="mobile-filter-select" style="margin: 0 auto; max-width: 300px;">
+        <option value="all">Brands</option>
+        <option value="CASABATH">CASABATH</option><option value="DVG">DVG</option><option value="EMIL GROUP ">EMIL GROUP </option><option value="KPM">KPM</option><option value="MILAGRO">MILAGRO</option><option value="SCPL">SCPL</option>
+      </select>
+    </div>
+  </main>
+<footer>
+    <div class="container footer-grid">
+      <div>
+        <img src="Homestudiologo.png" alt="Home Studio Surat Logo" class="footer-logo-img">
+        <p class="footer-brand-desc">
+          Surat's premium lifestyle destination for luxury CP fittings, tiles, sanitary ware, wellness steam, sauna & spas. Curating elite global brands since 2001.
+        </p>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title">Collections</h4>
+        <ul class="footer-links">
+          <li><a href="bathroom-fittings.html">Bathroom Fittings</a></li>
+          <li><a href="products.html?cat=sanitary">Sanitary Ware</a></li>
+          <li><a href="products.html?cat=tiles">Ceramic & Marble Tiles</a></li>
+          <li><a href="products.html?cat=wellness">Steam, Sauna & Spa</a></li>
+          <li><a href="products.html?cat=windows">Premium Windows</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="showroom.html">Surat Showroom</a></li>
+          <li><a href="bathroom-fittings.html">Global Brands</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+            <div>
+        <h4 class="footer-col-title">Locations</h4>
+        <ul class="footer-links">
+          <li><a href="luxury-home-studio-mumbai.html">Mumbai</a></li>
+          <li><a href="luxury-home-studio-delhi.html">Delhi</a></li>
+          <li><a href="luxury-home-studio-bangalore.html">Bangalore</a></li>
+          <li><a href="luxury-home-studio-hyderabad.html">Hyderabad</a></li>
+          <li><a href="luxury-home-studio-ahmedabad.html">Ahmedabad</a></li>
+          <li><a href="luxury-home-studio-chennai.html">Chennai</a></li>
+          <li><a href="luxury-home-studio-kolkata.html">Kolkata</a></li>
+          <li><a href="luxury-home-studio-pune.html">Pune</a></li>
+          <li><a href="luxury-home-studio-jaipur.html">Jaipur</a></li>
+          <li><a href="luxury-home-studio-surat.html">Surat</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Experience Center</h4>
+        <p class="footer-newsletter-text" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">
+          Shiv Shambhu Ind. Estate, 37-B,<br>
+          Udhana - Magdalla Road, Surat,<br>
+          Gujarat 395002
+        </p>
+        <p style="font-size: 0.9rem; color: var(--text-primary); font-weight: 500; margin-bottom: 1.5rem;">
+          Landline: (0261) 2631965
+        </p>
+        <h4 class="footer-col-title" style="margin-bottom: 0.8rem; font-size: 0.75rem;">Newsletter</h4>
+        <form class="newsletter-form" action="#" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+          <input class="newsletter-input" type="email" placeholder="Enter your email address" required aria-label="Newsletter email">
+          <button class="newsletter-btn" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Home Studio (formerly Studio Ceramic). All Rights Reserved. Luxury Experience Center, Surat.</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link">Instagram</a>
+        <a href="#" class="footer-social-link">Pinterest</a>
+        <a href="#" class="footer-social-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=6"></script>
+</body>
+</html>
+
+  
+
+  <script>
+    const productsData = [{"category": "Imported Tiles", "brand": "CASABATH", "image": "Tiles/Imported tiles/CASABATH/487238058_18494041666059252_1786582146223358186_n.jpg", "name": "487238058 18494041666059252 1786582146223358186 N"}, {"category": "Imported Tiles", "brand": "CASABATH", "image": "Tiles/Imported tiles/CASABATH/758518294_18382970059202952_2237661297766365091_n.jpg", "name": "758518294 18382970059202952 2237661297766365091 N"}, {"category": "Imported Tiles", "brand": "CASABATH", "image": "Tiles/Imported tiles/CASABATH/760545727_18382969966202952_5206763529062075475_n.jpg", "name": "760545727 18382969966202952 5206763529062075475 N"}, {"category": "Imported Tiles", "brand": "CASABATH", "image": "Tiles/Imported tiles/CASABATH/762864504_18382969993202952_4066397730962347566_n.jpg", "name": "762864504 18382969993202952 4066397730962347566 N"}, {"category": "Imported Tiles", "brand": "CASABATH", "image": "Tiles/Imported tiles/CASABATH/765997952_18611972047042054_6347224264605980777_n.jpg", "name": "765997952 18611972047042054 6347224264605980777 N"}, {"category": "Imported Tiles", "brand": "CASABATH", "image": "Tiles/Imported tiles/CASABATH/785214247_17903945898520167_9033534314498024285_n.heic", "name": "785214247 17903945898520167 9033534314498024285 N"}, {"category": "Imported Tiles", "brand": "DVG", "image": "Tiles/Imported tiles/DVG/AM_SHADE_CREAM_40X120_SHADE_CONCEPT_CREAM_40X120_SHADE_CREAM_60X120_IB_HD.jpeg", "name": "Am Shade Cream 40X120 Shade Concept Cream 40X120 Shade Cream 60X120 Ib Hd"}, {"category": "Imported Tiles", "brand": "DVG", "image": "Tiles/Imported tiles/DVG/AM_SHADE_WHITE_40X120_SHADE_ART_WHITE_40X120_SHADE_WHITE_90X90_IB_HD.jpeg", "name": "Am Shade White 40X120 Shade Art White 40X120 Shade White 90X90 Ib Hd"}, {"category": "Imported Tiles", "brand": "DVG", "image": "Tiles/Imported tiles/DVG/GROOVE_BEIGE.jpg", "name": "Groove Beige"}, {"category": "Imported Tiles", "brand": "DVG", "image": "Tiles/Imported tiles/DVG/MIYAKO VISON_MIYAKO ART VISON.jpg", "name": "Miyako Vison Miyako Art Vison"}, {"category": "Imported Tiles", "brand": "DVG", "image": "Tiles/Imported tiles/DVG/S_DDJ_23263-1_N02_1.jpg", "name": "S Ddj 23263 1 N02 1"}, {"category": "Imported Tiles", "brand": "EMIL GROUP ", "image": "Tiles/Imported tiles/EMIL GROUP /IMG_1171.PNG", "name": "Img 1171"}, {"category": "Imported Tiles", "brand": "EMIL GROUP ", "image": "Tiles/Imported tiles/EMIL GROUP /IMG_1172.PNG", "name": "Img 1172"}, {"category": "Imported Tiles", "brand": "EMIL GROUP ", "image": "Tiles/Imported tiles/EMIL GROUP /IMG_1221.jpg", "name": "Img 1221"}, {"category": "Imported Tiles", "brand": "EMIL GROUP ", "image": "Tiles/Imported tiles/EMIL GROUP /IMG_1222.PNG", "name": "Img 1222"}, {"category": "Imported Tiles", "brand": "EMIL GROUP ", "image": "Tiles/Imported tiles/EMIL GROUP /IMG_1223.PNG", "name": "Img 1223"}, {"category": "Imported Tiles", "brand": "EMIL GROUP ", "image": "Tiles/Imported tiles/EMIL GROUP /IMG_1224.PNG", "name": "Img 1224"}, {"category": "Imported Tiles", "brand": "EMIL GROUP ", "image": "Tiles/Imported tiles/EMIL GROUP /IMG_1225.PNG", "name": "Img 1225"}, {"category": "Imported Tiles", "brand": "KPM", "image": "Tiles/Imported tiles/KPM/484979193_18491507941059252_8590954005712358071_n.jpg", "name": "484979193 18491507941059252 8590954005712358071 N"}, {"category": "Imported Tiles", "brand": "KPM", "image": "Tiles/Imported tiles/KPM/487323581_1074910354655155_5520616995946495142_n.jpg", "name": "487323581 1074910354655155 5520616995946495142 N"}, {"category": "Imported Tiles", "brand": "KPM", "image": "Tiles/Imported tiles/KPM/789679836_17903945874520167_2986834735511455297_n.heic", "name": "789679836 17903945874520167 2986834735511455297 N"}, {"category": "Imported Tiles", "brand": "KPM", "image": "Tiles/Imported tiles/KPM/Moody depth meets handcrafted precision. The cool, storm-blue glaze brings a grounding calm to t.jpg", "name": "Moody Depth Meets Handcrafted Precision. The Cool, Storm Blue Glaze Brings A Grounding Calm To T"}, {"category": "Imported Tiles", "brand": "KPM", "image": "Tiles/Imported tiles/KPM/Unleash the Charm of Londons Brick Aesthetics with Miniature Fornace Marca Corona! \ud83e\uddf1\u2728__Immerse.jpg", "name": "Unleash The Charm Of Londons Brick Aesthetics With Miniature Fornace Marca Corona! \ud83e\uddf1\u2728  Immerse"}, {"category": "Imported Tiles", "brand": "MILAGRO", "image": "Tiles/Imported tiles/MILAGRO/CELEBRITY DOVE_ENDLESS_1200x1800_CARVING  PP.jpg", "name": "Celebrity Dove Endless 1200X1800 Carving  Pp"}, {"category": "Imported Tiles", "brand": "MILAGRO", "image": "Tiles/Imported tiles/MILAGRO/CELEBRITY DOVE_ENDLESS_1200x1800_CARVING  PP(1).jpg", "name": "Celebrity Dove Endless 1200X1800 Carving  Pp(1)"}, {"category": "Imported Tiles", "brand": "MILAGRO", "image": "Tiles/Imported tiles/MILAGRO/CV_quarz_grey 30x60_bali_ocean_amb_rgb_hr.jpg", "name": "Cv Quarz Grey 30X60 Bali Ocean Amb Rgb Hr"}, {"category": "Imported Tiles", "brand": "MILAGRO", "image": "Tiles/Imported tiles/MILAGRO/CV_quarz_grey 30x60_bali_ocean_amb_rgb_hr(1).jpg", "name": "Cv Quarz Grey 30X60 Bali Ocean Amb Rgb Hr(1)"}, {"category": "Imported Tiles", "brand": "MILAGRO", "image": "Tiles/Imported tiles/MILAGRO/MOSILLAS  001.jpg", "name": "Mosillas  001"}, {"category": "Imported Tiles", "brand": "MILAGRO", "image": "Tiles/Imported tiles/MILAGRO/MOSILLAS  001(1).jpg", "name": "Mosillas  001(1)"}, {"category": "Imported Tiles", "brand": "MILAGRO", "image": "Tiles/Imported tiles/MILAGRO/ONICE_NERO_&_SATORI_STATUARIO.jpg", "name": "Onice Nero & Satori Statuario"}, {"category": "Imported Tiles", "brand": "MILAGRO", "image": "Tiles/Imported tiles/MILAGRO/ONICE_NERO_&_SATORI_STATUARIO(1).jpg", "name": "Onice Nero & Satori Statuario(1)"}, {"category": "Imported Tiles", "brand": "MILAGRO", "image": "Tiles/Imported tiles/MILAGRO/PANO GREY STONE_2022.jpg", "name": "Pano Grey Stone 2022"}, {"category": "Imported Tiles", "brand": "MILAGRO", "image": "Tiles/Imported tiles/MILAGRO/PANO GREY STONE_2022(1).jpg", "name": "Pano Grey Stone 2022(1)"}, {"category": "Imported Tiles", "brand": "MILAGRO", "image": "Tiles/Imported tiles/MILAGRO/PANO GRIS STONE .jpg", "name": "Pano Gris Stone "}, {"category": "Imported Tiles", "brand": "SCPL", "image": "Tiles/Imported tiles/SCPL/516585958_18517520425050483_3011203539913668578_n.jpg", "name": "516585958 18517520425050483 3011203539913668578 N"}, {"category": "Imported Tiles", "brand": "SCPL", "image": "Tiles/Imported tiles/SCPL/589207298_18381164596148024_8902309057852673743_n.jpg", "name": "589207298 18381164596148024 8902309057852673743 N"}, {"category": "Imported Tiles", "brand": "SCPL", "image": "Tiles/Imported tiles/SCPL/619351300_18084048059139739_4476530531587645743_n.jpg", "name": "619351300 18084048059139739 4476530531587645743 N"}, {"category": "Imported Tiles", "brand": "SCPL", "image": "Tiles/Imported tiles/SCPL/632504698_18558265237033228_4327598519458501232_n.jpg", "name": "632504698 18558265237033228 4327598519458501232 N"}, {"category": "Imported Tiles", "brand": "SCPL", "image": "Tiles/Imported tiles/SCPL/685797050_18589710562038163_9219246912327040871_n.jpg", "name": "685797050 18589710562038163 9219246912327040871 N"}, {"category": "Imported Tiles", "brand": "SCPL", "image": "Tiles/Imported tiles/SCPL/718379028_1427061419466058_8329297645624954286_n.jpg", "name": "718379028 1427061419466058 8329297645624954286 N"}, {"category": "Imported Tiles", "brand": "SCPL", "image": "Tiles/Imported tiles/SCPL/731213384_17945968224238093_7200186212236728801_n.jpg", "name": "731213384 17945968224238093 7200186212236728801 N"}, {"category": "Imported Tiles", "brand": "SCPL", "image": "Tiles/Imported tiles/SCPL/731357140_17997794384958834_4261600948422773070_n.jpg", "name": "731357140 17997794384958834 4261600948422773070 N"}];
+    const itemsPerPage = 15;
+    let currentPage = 1;
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('products-grid');
+      const pagination = document.getElementById('pagination-controls');
+      const brandCheckboxes = document.querySelectorAll('.brand-checkbox');
+      const mobileBrandSelect = document.getElementById('mobile-brand-select');
+      
+      function renderProducts() {
+        // Determine active filters based on screen size
+        let selectedBrands = [];
+        
+        if (window.innerWidth <= 900) {
+            if (mobileBrandSelect.value !== 'all') {
+                selectedBrands.push(mobileBrandSelect.value);
+            }
+        } else {
+            selectedBrands = Array.from(brandCheckboxes)
+                                  .filter(cb => cb.checked)
+                                  .map(cb => cb.value);
+        }
+                                  
+        let filtered = productsData.filter(p => {
+          const matchBrand = selectedBrands.length === 0 || selectedBrands.includes(p.brand);
+          return matchBrand;
+        });
+        
+        // Paginate
+        const totalPages = Math.ceil(filtered.length / itemsPerPage);
+        if (currentPage > totalPages) currentPage = Math.max(1, totalPages);
+        
+        const start = (currentPage - 1) * itemsPerPage;
+        const paginated = filtered.slice(start, start + itemsPerPage);
+        
+        // Render Grid
+        grid.innerHTML = '';
+        if (paginated.length === 0) {
+          grid.innerHTML = '<div class="no-results">No products found matching your filters.</div>';
+        } else {
+          paginated.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.innerHTML = `
+              <div class="product-image-container">
+                <div class="pills-container">
+                  <span class="pill pill-brand">${p.brand}</span>
+                  <span class="pill pill-category">${p.category}</span>
+                </div>
+                <img src="${p.image}" alt="${p.name}" class="product-image" loading="lazy">
+              </div>
+              <div class="product-details">
+                <h3 class="product-name">${p.name}</h3>
+                <a href="contact.html" class="enquire-btn">Enquire Now</a>
+              </div>
+            `;
+            grid.appendChild(card);
+          });
+        }
+        
+        // Render Pagination
+        pagination.innerHTML = '';
+        if (totalPages > 1) {
+          const prevBtn = document.createElement('button');
+          prevBtn.className = 'page-btn';
+          prevBtn.innerHTML = '&laquo;';
+          prevBtn.disabled = currentPage === 1;
+          prevBtn.onclick = () => { currentPage--; renderProducts(); window.scrollTo(0, 300); };
+          pagination.appendChild(prevBtn);
+          
+          // Page numbers
+          for (let i = 1; i <= totalPages; i++) {
+            if (totalPages > 7) {
+               if (i !== 1 && i !== totalPages && Math.abs(i - currentPage) > 1) {
+                  if (i === 2 || i === totalPages - 1) {
+                     const dots = document.createElement('span');
+                     dots.className = 'page-text';
+                     dots.textContent = '...';
+                     pagination.appendChild(dots);
+                  }
+                  continue;
+               }
+            }
+            
+            const btn = document.createElement('button');
+            btn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+            btn.textContent = i;
+            btn.onclick = () => { currentPage = i; renderProducts(); window.scrollTo(0, 300); };
+            pagination.appendChild(btn);
+          }
+          
+          const nextBtn = document.createElement('button');
+          nextBtn.className = 'page-btn';
+          nextBtn.innerHTML = '&raquo;';
+          nextBtn.disabled = currentPage === totalPages;
+          nextBtn.onclick = () => { currentPage++; renderProducts(); window.scrollTo(0, 300); };
+          pagination.appendChild(nextBtn);
+        }
+      }
+      
+      // Event Listeners
+      brandCheckboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+          currentPage = 1;
+          renderProducts();
+        });
+      });
+      
+      mobileBrandSelect.addEventListener('change', () => {
+        currentPage = 1;
+        renderProducts();
+      });
+      
+      window.addEventListener('resize', () => {
+        renderProducts();
+      });
+      
+      // Initial render
+      renderProducts();
+    });
+  </script>
+
+</body>
+</html>

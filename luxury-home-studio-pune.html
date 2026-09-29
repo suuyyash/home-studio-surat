@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Interior Design & Premium Bath Fittings in Pune | Home Studio</title>
+  <meta name="description" content="Elevate your Pune property with bespoke luxury bathroom fittings, smart sanitary ware, imported marble tiles, and wellness spas curated by Home Studio.">
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    /* Custom styles for About page */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: var(--border-color);
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6rem;
+      position: relative;
+    }
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .timeline-dot {
+      width: 14px;
+      height: 14px;
+      background-color: var(--accent);
+      border: 3px solid var(--bg-primary);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+    .timeline-content {
+      width: 44%;
+      background-color: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+    }
+    .timeline-year {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+      font-weight: 300;
+      line-height: 1;
+    }
+    .timeline-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-item, .timeline-item:nth-child(even) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 45px;
+      }
+      .timeline-dot {
+        left: 20px;
+        transform: translateX(-50%);
+      }
+      .timeline-content {
+        width: 100%;
+        padding: 2.2rem;
+      }
+    }
+    
+    /* Founders Section */
+    .founders-section {
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      background-color: var(--bg-secondary);
+    }
+    .founders-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 4rem;
+    }
+    .founder-profile-card {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      background-color: var(--bg-tertiary);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .founder-info-block {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .founder-role {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+    .founder-name {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .founder-desc {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-weight: 300;
+      color: var(--text-secondary);
+    }
+    
+    @media (max-width: 768px) {
+      .founders-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .founder-info-block {
+        padding: 1.5rem;
+      }
+    }
+    
+    .founder-quote {
+      text-align: center;
+      max-width: 850px;
+      margin: 6rem auto 0;
+      padding: 4rem 2rem 0;
+      border-top: 1px solid var(--border-color);
+    }
+    .quote-mark {
+      font-family: var(--font-serif);
+      font-size: 5rem;
+      line-height: 0.1;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 2rem;
+    }
+    .quote-text {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--text-primary);
+      margin-bottom: 2rem;
+    }
+    .quote-author {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 3rem;
+      margin-top: 5rem;
+    }
+    .value-box {
+      border-left: 1px solid var(--accent);
+      padding-left: 2rem;
+    }
+    .value-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+
+  <style>
+    /* Premium SEO Page Components */
+    .hero-seo {
+      position: relative;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/showroom-interior.jpg') no-repeat center center/cover;
+      color: #fff;
+      padding-top: var(--header-height);
+    }
+    
+    .stats-banner {
+      background-color: #0c0b0a;
+      color: #fff;
+      padding: 6rem 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    .stat-number {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #9c9993;
+    }
+    
+    .card-grid-premium {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+    .premium-hover-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      aspect-ratio: 4/3;
+      group: hover;
+    }
+    .premium-hover-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    .premium-hover-card:hover .premium-hover-img {
+      transform: scale(1.05);
+    }
+    .premium-hover-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 3rem 2rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+      color: #fff;
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+    .testimonial-card {
+      background-color: var(--bg-tertiary);
+      padding: 3rem 2rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      position: relative;
+    }
+    .quote-icon {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      color: var(--accent);
+      opacity: 0.3;
+      position: absolute;
+      top: 1rem;
+      left: 2rem;
+      line-height: 1;
+    }
+    
+    /* Accordion */
+    .faq-accordion {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .accordion-item {
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 1rem;
+    }
+    .accordion-header {
+      width: 100%;
+      text-align: left;
+      padding: 1.5rem 0;
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+    .accordion-header:hover {
+      color: var(--accent);
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .accordion-content p {
+      font-weight: 300;
+      padding-bottom: 1.5rem;
+    }
+    .accordion-item.active .accordion-content {
+      max-height: 800px; /* arbitrary large max-height */
+    }
+    .accordion-icon {
+      font-size: 1.5rem;
+      color: var(--accent);
+      transition: transform 0.3s ease;
+    }
+    .accordion-item.active .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    @media (max-width: 900px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .card-grid-premium { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const accordions = document.querySelectorAll('.accordion-header');
+      accordions.forEach(acc => {
+        acc.addEventListener('click', function() {
+          this.parentElement.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-outline"></div>
+
+  <!-- Global Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="Homestudiologo.png" alt="Home Studio Surat" class="logo-img">
+      </a>
+      
+      <nav class="nav-menu">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="products.html" class="nav-link">Products</a>
+          <!-- Fixed Full-Width Mega Menu -->
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h4 class="mega-column-title">CP Fittings</h4>
+              <ul class="mega-list">
+                <li><a href="bathroom-fittings-products.html">Bathroom Fittings</a></li>
+                <li><a href="kitchen-sink-products.html">Kitchen Sink</a></li>
+                <li><a href="sanitaryware-products.html">Sanitaryware</a></li>
+                <li><a href="steam-sauna-products.html">Steam & Sauna System</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4 class="mega-column-title">Tiles</h4>
+              <ul class="mega-list">
+                <li><a href="domestic-tiles-products.html">Domestic Tiles</a></li>
+                <li><a href="imported-tiles-products.html">Imported Tiles</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4 class="mega-column-title">Windows</h4>
+              <ul class="mega-list">
+                <li><a href="#">Premium Windows</a></li>
+              </ul>
+            </div>
+            <div class="mega-featured">
+              <h4 class="mega-column-title">The Showroom</h4>
+              <img src="images/showroom-interior.jpg" alt="Showroom Preview" class="mega-featured-img">
+              <p class="mega-featured-text">Browse live demonstration shower and wellness spa zones in Surat.</p>
+              <a href="showroom.html" class="text-gold" style="font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase;">Explore Showroom →</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nav-item">
+          <a href="bathroom-fittings.html" class="nav-link">Brands</a>
+          <div class="mega-menu">
+            <div class="mega-column" style="grid-column: span 1;">
+              <h4 class="mega-column-title">Partner Brands</h4>
+              <p class="mega-featured-text" style="margin-bottom: 2rem;">We house curated curations of premium international brands under one exclusive roof.</p>
+              <a href="bathroom-fittings.html" class="btn-secondary" style="padding: 0.8rem 1.6rem; font-size: 0.75rem;">Brand Directory</a>
+            </div>
+            <div style="grid-column: span 3;">
+              <h4 class="mega-column-title">Featured Global Labels</h4>
+              <div class="mega-brand-grid">
+                <a href="brand-artize.html" class="mega-brand-item">ARTIZE</a>
+                <a href="brand-axor.html" class="mega-brand-item">AXOR</a>
+                <a href="brand-blanco.html" class="mega-brand-item">BLANCO</a>
+                <a href="brand-carysil.html" class="mega-brand-item">CARYSIL</a>
+                <a href="brand-geberit.html" class="mega-brand-item">GEBERIT</a>
+                <a href="brand-grohe.html" class="mega-brand-item">GROHE</a>
+                <a href="brand-hansgrohe.html" class="mega-brand-item">HANSGROHE</a>
+                <a href="brand-jaquar.html" class="mega-brand-item">JAQUAR</a>
+                <a href="brand-oyster.html" class="mega-brand-item">OYSTER</a>
+                <a href="brand-stiebel.html" class="mega-brand-item">STIEBEL</a>
+                <a href="brand-tece.html" class="mega-brand-item">TECE</a>
+                <a href="brand-toto.html" class="mega-brand-item">TOTO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nav-item">
+          <a href="showroom.html" class="nav-link">Showroom</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </nav>
+      
+      <div class="nav-controls">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+        
+        <div class="hamburger" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Drawer -->
+  <div class="mobile-drawer">
+            <nav class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      
+      <!-- Products Accordion -->
+      <div class="mobile-nav-item-accordion">
+        <div class="mobile-nav-accordion-header">
+          <a href="products.html" class="mobile-nav-link" style="color: inherit; text-decoration: none;">Products</a>
+          <button type="button" class="mobile-accordion-btn" aria-label="Toggle Products Submenu">+</button>
+        </div>
+        <div class="mobile-nav-accordion-body">
+          <div class="mobile-submenu-group" style="margin-bottom: 0.5rem;">
+            <a href="products.html" class="mobile-submenu-link text-gold" style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; display: block;">Browse All Collections Hub →</a>
+          </div>
+
+          <!-- Nested Accordion: CP Fittings -->
+          <div class="mobile-nav-item-accordion nested-accordion" style="margin-bottom: 0.8rem;">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">CP Fittings</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle CP Fittings">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="bathroom-fittings-products.html" class="mobile-submenu-link">Bathroom Fittings</a>
+              <a href="kitchen-sink-products.html" class="mobile-submenu-link">Kitchen Sinks</a>
+              <a href="sanitaryware-products.html" class="mobile-submenu-link">Sanitaryware</a>
+              <a href="steam-sauna-products.html" class="mobile-submenu-link">Steam & Sauna Systems</a>
+            </div>
+          </div>
+
+          <!-- Nested Accordion: Tiles -->
+          <div class="mobile-nav-item-accordion nested-accordion" style="margin-bottom: 0.8rem;">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">Tiles</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle Tiles">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="domestic-tiles-products.html" class="mobile-submenu-link">Domestic Tiles</a>
+              <a href="imported-tiles-products.html" class="mobile-submenu-link">Imported Tiles</a>
+            </div>
+          </div>
+
+          <!-- Nested Accordion: Windows -->
+          <div class="mobile-nav-item-accordion nested-accordion">
+            <div class="mobile-nav-accordion-header">
+              <span class="mobile-submenu-title" style="margin-bottom: 0; font-size: 1.15rem; font-weight: normal; text-transform: none; letter-spacing: normal; color: var(--text-primary); cursor: pointer;">Windows</span>
+              <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle Windows">+</button>
+            </div>
+            <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
+              <a href="contact.html?inquiry=Windows-Systems" class="mobile-submenu-link">Premium Windows</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brands Accordion -->
+      <div class="mobile-nav-item-accordion">
+        <div class="mobile-nav-accordion-header">
+          <a href="bathroom-fittings.html" class="mobile-nav-link">Brands</a>
+          <button class="mobile-accordion-btn" aria-label="Toggle Brands Submenu">+</button>
+        </div>
+        <div class="mobile-nav-accordion-body">
+          <div class="mobile-submenu-group" style="margin-bottom: 0.5rem;">
+            <a href="bathroom-fittings.html" class="mobile-submenu-link text-gold" style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; display: block;">Brand Directory →</a>
+          </div>
+          
+          <a href="brand-artize.html" class="mobile-submenu-link">ARTIZE</a>
+              <a href="brand-axor.html" class="mobile-submenu-link">AXOR</a>
+              <a href="brand-blanco.html" class="mobile-submenu-link">BLANCO</a>
+              <a href="brand-carysil.html" class="mobile-submenu-link">CARYSIL</a>
+              <a href="brand-geberit.html" class="mobile-submenu-link">GEBERIT</a>
+              <a href="brand-grohe.html" class="mobile-submenu-link">GROHE</a>
+              <a href="brand-hansgrohe.html" class="mobile-submenu-link">HANSGROHE</a>
+              <a href="brand-jaquar.html" class="mobile-submenu-link">JAQUAR</a>
+              <a href="brand-oyster.html" class="mobile-submenu-link">OYSTER</a>
+              <a href="brand-stiebel.html" class="mobile-submenu-link">STIEBEL</a>
+              <a href="brand-tece.html" class="mobile-submenu-link">TECE</a>
+              <a href="brand-toto.html" class="mobile-submenu-link">TOTO</a>
+        </div>
+      </div>
+
+      <a href="showroom.html" class="mobile-nav-link">Showroom</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-footer-col">
+        <p style="font-weight: 600; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; letter-spacing: 0.05em;">Home Studio Surat</p>
+        <p>Shiv Shambhu Ind. Estate, 37-B,</p>
+        <p>Udhana-Magdalla Road, Surat</p>
+      </div>
+      <div class="mobile-footer-col" style="text-align: right;">
+        <p style="font-weight: 600; margin-bottom: 0.5rem;">Landline</p>
+        <p>(0261) 2631965</p>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-overlay"></div>
+  <!-- Hero Section -->
+  <section class="hero-seo">
+    <div class="container reveal" style="position: relative; z-index: 10;">
+      <span class="section-tag" style="color: var(--accent); text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Exclusive Architecture in Pune</span>
+      <h1 style="color: #fff; text-shadow: 0 4px 20px rgba(0,0,0,0.6); margin-bottom: 2rem;">The Pinnacle of Luxury<br>Bath & Surfaces</h1>
+      <p style="color: #eaeaea; max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem; text-shadow: 0 2px 8px rgba(0,0,0,0.5); font-weight: 300;">
+        Transforming Pune's finest residences and commercial developments with world-class sanitary ware, imported tiles, and elite wellness systems.
+      </p>
+      <a href="contact.html" class="btn-primary magnetic-btn">Book Your Consultation</a>
+    </div>
+  </section>
+
+  <!-- Architectural Context Split-Screen -->
+  <section class="section-padding" style="background-color: var(--bg-primary);">
+    <div class="container">
+      <div class="editorial-grid">
+        <div class="editorial-col-6 reveal">
+          <div class="editorial-img-wrap" style="aspect-ratio: 4/5;">
+            <img src="images/bathroom-fittings.jpg" alt="Luxury Bathroom Interior in Pune">
+          </div>
+        </div>
+        <div class="editorial-col-6 reveal reveal-delay-1" style="padding-left: 2rem;">
+          <span class="section-tag">Bespoke Living</span>
+          <h2 class="section-title">Elevating Pune's Real Estate</h2>
+          <p style="margin-bottom: 1.5rem; font-weight: 300;">
+            The architectural landscape of Pune demands nothing short of perfection. At Home Studio, we bridge the gap between global design hubs and Pune's elite property developers, bringing you unparalleled access to the world's most luxurious bathroom and surface materials.
+          </p>
+          <p style="margin-bottom: 2.5rem; font-weight: 300;">
+            Whether you are designing a high-altitude penthouse that requires minimalist, intelligent water systems or a sprawling heritage villa demanding ornate brushed-gold fixtures, our curation ensures your project in Pune is executed flawlessly. We collaborate directly with leading interior designers and architects to supply materials that offer robust longevity and cutting-edge aesthetics.
+          </p>
+          <a href="about.html" class="btn-secondary">Discover Our Legacy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Collections (Card Grid) -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center; margin: 0 auto 5rem;">
+        <span class="section-tag">Master Curation</span>
+        <h2 class="section-title">Exclusive Collections for Pune</h2>
+        <p class="section-desc">Four pillars of luxury living, engineered for exceptional performance.</p>
+      </div>
+
+      <div class="card-grid-premium">
+        <!-- Card 1 -->
+        <div class="premium-hover-card reveal">
+          <img src="images/bathroom-fittings.jpg" alt="Luxury Faucets Pune" class="premium-hover-img">
+          <div class="premium-hover-content">
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 0.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Haute Couture Faucets</h3>
+            <p style="font-weight: 300; font-size: 0.95rem; text-shadow: 0 1px 2px rgba(0,0,0,0.8);">Engineered in Germany and Italy. Featuring PVD coatings highly resistant to scratching and Pune's specific water conditions.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="premium-hover-card reveal reveal-delay-1">
+          <img src="images/sanitary-ware.jpg" alt="Smart Toilets Pune" class="premium-hover-img">
+          <div class="premium-hover-content">
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 0.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Intelligent Sanitary Ware</h3>
+            <p style="font-weight: 300; font-size: 0.95rem; text-shadow: 0 1px 2px rgba(0,0,0,0.8);">Next-generation smart toilets and rimless WCs offering radar-guided lids, heated seating, and UV self-cleaning technologies.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="premium-hover-card reveal">
+          <img src="images/tiles.jpg" alt="Imported Marble Tiles Pune" class="premium-hover-img">
+          <div class="premium-hover-content">
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 0.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Large-Format Tiles</h3>
+            <p style="font-weight: 300; font-size: 0.95rem; text-shadow: 0 1px 2px rgba(0,0,0,0.8);">Imported directly from Italy and Spain. Massive ceramic slabs and authentic marble that eliminate grout lines for vast, seamless expanses.</p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="premium-hover-card reveal reveal-delay-1">
+          <img src="images/showroom-interior.jpg" alt="Luxury Wellness Spa Pune" class="premium-hover-img">
+          <div class="premium-hover-content">
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 0.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Bespoke Wellness</h3>
+            <p style="font-weight: 300; font-size: 0.95rem; text-shadow: 0 1px 2px rgba(0,0,0,0.8);">Transform your Pune residence with custom dry-heat saunas, advanced steam rooms, and pressurized multi-jet spa cabins.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 4rem;" class="reveal">
+        <a href="products.html" class="btn-primary magnetic-btn">Explore Full Directory</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats / Trust Banner -->
+  <section class="stats-banner">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="reveal">
+          <div class="stat-number">25+</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Global Brands</div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="stat-number">1000+</div>
+          <div class="stat-label">Projects Supplied</div>
+        </div>
+        <div class="reveal reveal-delay-3">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Authentic Imports</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Showcase -->
+  <section class="section-padding" style="background-color: var(--bg-tertiary);">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center; margin: 0 auto 4rem;">
+        <span class="section-tag">Brand Partners</span>
+        <h2 class="section-title">The World's Elite, Delivered to Pune</h2>
+        <p class="section-desc">We are the authorized purveyors for the most prestigious names in bathroom architecture.</p>
+      </div>
+      
+      <div class="mega-brand-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+        <a href="brand-toto.html" class="mega-brand-item">TOTO (Japan)</a>
+        <a href="brand-heisenberg.html" class="mega-brand-item">HEISENBERG</a>
+        <a href="brand-hansgrohe.html" class="mega-brand-item">HANSGROHE (Germany)</a>
+        <a href="brand-kohler.html" class="mega-brand-item">KOHLER (USA)</a>
+        <a href="brand-gessi.html" class="mega-brand-item">GESSI (Italy)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center; margin: 0 auto 5rem;">
+        <span class="section-tag">Social Proof</span>
+        <h2 class="section-title">Trusted by Pune's Finest</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <span class="quote-icon">"</span>
+          <p style="font-style: italic; margin-bottom: 2rem; font-size: 1.05rem; position: relative; z-index: 2;">"Home Studio's ability to source specific Gessi finishes for our Pune high-rise project was unmatched. Their logistics team handled the fragile marble tiles flawlessly."</p>
+          <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.2rem;">Ar. Vikram S.</h4>
+          <span style="font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em;">Principal Architect, Pune</span>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <span class="quote-icon">"</span>
+          <p style="font-style: italic; margin-bottom: 2rem; font-size: 1.05rem; position: relative; z-index: 2;">"The technical consultation we received for the wellness spa installation in our luxury villa saved us weeks of guesswork. A truly premium partner."</p>
+          <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.2rem;">Priya M.</h4>
+          <span style="font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em;">Interior Designer, Pune</span>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <span class="quote-icon">"</span>
+          <p style="font-style: italic; margin-bottom: 2rem; font-size: 1.05rem; position: relative; z-index: 2;">"Visiting their massive Experience Center before finalizing our Pune home was the best decision. Experiencing live smart-toilets changed our entire design approach."</p>
+          <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.2rem;">Rahul D.</h4>
+          <span style="font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em;">Private Homeowner, Pune</span>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 4rem;" class="reveal">
+        <a href="contact.html" class="btn-secondary">Read More Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive FAQ Accordion (SEO Density) -->
+  <section class="section-padding" style="background-color: var(--bg-primary);">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center; margin: 0 auto 4rem;">
+        <span class="section-tag">Knowledge Base</span>
+        <h2 class="section-title">Project Logistics & Consultation in Pune</h2>
+        <p class="section-desc">Detailed answers regarding supply, warranties, and architectural coordination.</p>
+      </div>
+
+      <div class="faq-accordion reveal">
+        <!-- Q1 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Do you deliver luxury tiles and sanitary ware directly to Pune?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Absolutely. While our sprawling 19,500 sqft Experience Center is located in Surat, we have a robust, highly secure logistics network that facilitates seamless delivery of premium tiles, bathtubs, and fittings directly to residential and commercial construction sites anywhere in Pune. From the moment your order is curated, our project managers coordinate directly with your on-site contractors. We ensure that deliveries are phased according to your construction schedule, preventing on-site clutter and minimizing the risk of damage. All shipments to Pune are fully insured against transit damage.</p>
+          </div>
+        </div>
+        <!-- Q2 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>How can architects in Pune collaborate with Home Studio?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>We operate a dedicated architectural support division specifically for commercial and luxury residential projects. Architects and interior designers based in Pune can share their CAD drawings and 3D renders with us. Our technical team will propose a curated selection of fixtures that match the design language, ensure plumbing compatibility, and provide detailed technical specs (including rough-in dimensions) for the contractor's reference in Pune.</p>
+          </div>
+        </div>
+        <!-- Q3 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Are imported brands compatible with Pune's water pressure standards?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Yes. This is a critical advantage of working with our technical team. We specifically curate product lines from global brands that are engineered to function optimally within Indian plumbing infrastructure. We also consult on the necessary pressure pumps, concealed cistern requirements, and filtration systems needed to ensure fixtures like rain showers, wellness spas, and smart toilets operate flawlessly in Pune.</p>
+          </div>
+        </div>
+        <!-- Q4 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Do you offer installation services in Pune?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>We operate primarily as a premium supply and consulting partner. While we do not deploy physical installation teams to Pune, we provide exhaustive technical support. We supply detailed installation manuals, plumbing schematics, and our engineers are available for video consultations to guide your local plumbing and masonry teams in Pune through complex installations of steam rooms, saunas, and concealed thermostatic valves.</p>
+          </div>
+        </div>
+        <!-- Q5 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>What is the lead time for specialized luxury fixtures to Pune?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>We maintain a vast inventory of popular premium lines ready for immediate dispatch to Pune. However, for highly specialized bespoke finishes—such as brushed red gold faucets, custom-cut Italian marble, or massive freestanding bathtubs—the lead time from European manufacturing facilities typically ranges from 8 to 12 weeks. We strongly advise our Pune clients to begin material selection during the early architectural planning phase.</p>
+          </div>
+        </div>
+        <!-- Q6 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Is it worth traveling from Pune to visit the Experience Center?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Unequivocally, yes. Viewing luxury fittings in a catalog cannot substitute experiencing them in person. Our massive showroom features fully pressurized, live-water displays. You can test the exact spray patterns of showers, feel the texture of imported marble, and test the functionality of smart toilets before making a significant investment for your Pune property. We regularly host architects who fly in exclusively for a guided tour.</p>
+          </div>
+        </div>
+        <!-- Q7 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>What warranties apply to clients purchasing from Pune?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Because we are authorized direct distributors for brands like TOTO, Hansgrohe, Gessi, and Kohler, every product we supply to Pune is backed by the manufacturer's full official warranty in India. Should you face any manufacturing defects, the official service networks for these respective brands will honor the warranty directly at your location in Pune. You do not have to rely on unauthorized third-party repairs.</p>
+          </div>
+        </div>
+        <!-- Q8 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Do you cater to commercial projects like luxury hotels in Pune?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p>Yes, our Commercial Projects division handles large-scale procurements for hospitality chains, luxury resorts, commercial offices, and high-end corporate towers in Pune. We offer specialized project pricing, bulk logistics management, and work closely with commercial developers to ensure timely, phased deliveries that perfectly align with massive construction schedules.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section-padding" style="background-color: var(--bg-tertiary); text-align: center; border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <h2 class="section-title reveal" style="font-size: clamp(2.5rem, 5vw, 4rem);">Realize Your Vision in Pune</h2>
+      <p class="section-desc reveal" style="max-width: 700px; margin: 0 auto 3.5rem; font-size: 1.15rem;">
+        Don't compromise on the sanctuary of your dreams. Whether you are ready to finalize your material selections or seeking expert consultation for a new build in Pune, our team is prepared to assist you.
+      </p>
+      <div class="reveal">
+        <a href="contact.html" class="btn-primary magnetic-btn" style="margin-right: 1.5rem;">Start Your Project</a>
+        <a href="showroom.html" class="btn-secondary">Visit Our Showroom</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <img src="Homestudiologo.png" alt="Home Studio Surat Logo" class="footer-logo-img">
+        <p class="footer-brand-desc">
+          Surat's premium lifestyle destination for luxury CP fittings, tiles, sanitary ware, wellness steam, sauna & spas. Curating elite global brands since 2001.
+        </p>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title">Collections</h4>
+        <ul class="footer-links">
+          <li><a href="bathroom-fittings.html">Bathroom Fittings</a></li>
+          <li><a href="products.html?cat=sanitary">Sanitary Ware</a></li>
+          <li><a href="products.html?cat=tiles">Ceramic & Marble Tiles</a></li>
+          <li><a href="products.html?cat=wellness">Steam, Sauna & Spa</a></li>
+          <li><a href="products.html?cat=windows">Premium Windows</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="showroom.html">Surat Showroom</a></li>
+          <li><a href="bathroom-fittings.html">Global Brands</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+            <div>
+        <h4 class="footer-col-title">Locations</h4>
+        <ul class="footer-links">
+          <li><a href="luxury-home-studio-mumbai.html">Mumbai</a></li>
+          <li><a href="luxury-home-studio-delhi.html">Delhi</a></li>
+          <li><a href="luxury-home-studio-bangalore.html">Bangalore</a></li>
+          <li><a href="luxury-home-studio-hyderabad.html">Hyderabad</a></li>
+          <li><a href="luxury-home-studio-ahmedabad.html">Ahmedabad</a></li>
+          <li><a href="luxury-home-studio-chennai.html">Chennai</a></li>
+          <li><a href="luxury-home-studio-kolkata.html">Kolkata</a></li>
+          <li><a href="luxury-home-studio-pune.html">Pune</a></li>
+          <li><a href="luxury-home-studio-jaipur.html">Jaipur</a></li>
+          <li><a href="luxury-home-studio-surat.html">Surat</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Experience Center</h4>
+        <p class="footer-newsletter-text" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">
+          Shiv Shambhu Ind. Estate, 37-B,<br>
+          Udhana - Magdalla Road, Surat,<br>
+          Gujarat 395002
+        </p>
+        <p style="font-size: 0.9rem; color: var(--text-primary); font-weight: 500; margin-bottom: 1.5rem;">
+          Landline: (0261) 2631965
+        </p>
+        <h4 class="footer-col-title" style="margin-bottom: 0.8rem; font-size: 0.75rem;">Newsletter</h4>
+        <form class="newsletter-form" action="#" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+          <input class="newsletter-input" type="email" placeholder="Enter your email address" required aria-label="Newsletter email">
+          <button class="newsletter-btn" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Home Studio (formerly Studio Ceramic). All Rights Reserved. Luxury Experience Center, Surat.</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-link">Instagram</a>
+        <a href="#" class="footer-social-link">Pinterest</a>
+        <a href="#" class="footer-social-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=6"></script>
+</body>
+</html>
