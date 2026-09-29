@@ -191,8 +191,8 @@ header.header-scrolled {
 }
 
 .logo-img {
-  width: 104px; /* Desktop width set to 104px */
-  height: 109px; /* Desktop height set to 109px */
+  width: auto;
+  height: 109px; /* Desktop height */
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(18,18,18,0.05));
   transition: all 0.4s ease;
@@ -200,8 +200,8 @@ header.header-scrolled {
 
 @media (max-width: 768px) {
   .logo-img {
-    width: 104px; /* Mobile width set to 104px */
-    height: 109px; /* Mobile height set to 109px */
+    width: auto;
+    height: 90px; /* Mobile height */
   }
 }
 
