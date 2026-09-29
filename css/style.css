@@ -19,7 +19,7 @@
   --font-sans: 'Inter', sans-serif;
   
   --max-width: 1440px;
-  --header-height: 90px;
+  --header-height: 125px;
   
   /* Modern Rounded Design System variables */
   --radius-lg: 24px;
@@ -191,8 +191,8 @@ header.header-scrolled {
 }
 
 .logo-img {
-  width: 180px; /* Desktop width exactly 180px */
-  height: 72px; /* Proportionate height */
+  width: 104px; /* Desktop width set to 104px */
+  height: 109px; /* Desktop height set to 109px */
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(18,18,18,0.05));
   transition: all 0.4s ease;
@@ -200,8 +200,8 @@ header.header-scrolled {
 
 @media (max-width: 768px) {
   .logo-img {
-    width: 170px; /* Mobile responsive width */
-    height: 68px;
+    width: 104px; /* Mobile width set to 104px */
+    height: 109px; /* Mobile height set to 109px */
   }
 }
 
@@ -996,16 +996,16 @@ footer {
 }
 
 .footer-logo-img {
-  height: 60px;
+  height: 110px;
   width: auto;
   object-fit: contain;
   margin-bottom: 1.8rem;
-  filter: drop-shadow(0 2px 4px rgba(18,18,18,0.05));
-  transition: filter 0.4s ease;
+  filter: none;
+  transition: none;
 }
 
 [data-theme="dark"] .footer-logo-img {
-  filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(255,255,255,0.08));
+  filter: none;
 }
 
 .footer-brand-desc {
@@ -1093,15 +1093,30 @@ footer {
 
 .footer-socials {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
 }
 
 .footer-social-link {
-  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .footer-social-link:hover {
-  color: var(--accent);
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+  transform: translateY(-3px);
 }
 
 /* --- Brand Pages Specific Templates (Rounded) --- */
