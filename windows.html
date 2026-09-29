@@ -3,10 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gessi Italy | Designer Faucets & Luxury Accessories | Home Studio Surat</title>
-  <meta name="description" content="Browse Gessi Italy's luxury designer taps and wellness fixtures at Home Studio Surat. Sourcing haute couture brassware designs for high-end residential bath interiors.">
+  <title>Premium Windows Collection | Home Studio Surat</title>
+  <meta name="description" content="Discover our exclusive range of premium window systems.">
   <link rel="stylesheet" href="css/style.css?v=6">
   <link rel="stylesheet" href="css/animations.css">
+
+  <style>
+    .page-hero {
+        padding-top: 150px;
+        padding-bottom: 80px;
+        text-align: center;
+        background-color: var(--bg-secondary);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .page-title {
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 6vw, 5rem);
+        color: var(--accent);
+        margin-bottom: 1rem;
+    }
+    .page-subtitle {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .showroom-grid {
+      columns: 3 320px;
+      column-gap: 1.5rem;
+      padding: 2rem 0 6rem;
+    }
+    
+    .grid-item {
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      background: var(--bg-tertiary);
+      cursor: pointer;
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    
+    .grid-img {
+      width: 100%;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    
+    .grid-item:hover .grid-img {
+      transform: scale(1.05);
+    }
+    
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+      opacity: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+      transition: opacity 0.4s ease;
+    }
+    
+    .grid-item:hover .grid-overlay {
+      opacity: 1;
+    }
+    
+    .grid-category {
+      color: var(--accent);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .lightbox-img {
+      max-width: 90%;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 2.5rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    
+    .lightbox-close:hover {
+      color: var(--accent);
+    }
+  </style>
+
 </head>
 <body>
 
@@ -14,7 +134,6 @@
   <div class="custom-cursor"></div>
   <div class="custom-cursor-outline"></div>
 
-  <!-- Global Header -->
   <header>
     <div class="container header-container">
       <a href="index.html" class="logo-link">
@@ -49,7 +168,7 @@
             <div class="mega-column">
               <h4 class="mega-column-title">Windows</h4>
               <ul class="mega-list">
-                <li><a href="windows.html">Premium Windows</a></li>
+                <li><a href="#">Premium Windows</a></li>
               </ul>
             </div>
             <div class="mega-featured">
@@ -116,8 +235,7 @@
       </div>
     </div>
   </header>
-
-  <!-- Mobile Overlay Drawer -->
+  
   <div class="mobile-drawer">
             <nav class="mobile-nav-list">
       <a href="index.html" class="mobile-nav-link">Home</a>
@@ -166,7 +284,7 @@
               <button type="button" class="mobile-accordion-btn" style="width: 32px; height: 32px; font-size: 1rem;" aria-label="Toggle Windows">+</button>
             </div>
             <div class="mobile-nav-accordion-body" style="padding-left: 1rem;">
-              <a href="windows.html" class="mobile-submenu-link">Premium Windows</a>
+              <a href="contact.html?inquiry=Windows-Systems" class="mobile-submenu-link">Premium Windows</a>
             </div>
           </div>
         </div>
@@ -217,203 +335,111 @@
     </div>
   </div>
   <div class="mobile-overlay"></div>
-
-  <!-- Brand Hero Banner (Parallax Ready) -->
-  <section class="brand-hero parallax-wrap">
-    <video class="brand-hero-video parallax-bg" autoplay muted loop playsinline>
-      <source src="homepagevideo.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-    
-    <div class="container">
-      <div class="brand-hero-content reveal">
-        <span class="section-tag">Italian Haute Couture</span>
-        <h1 style="color: #ffffff; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">GESSI ITALY</h1>
-        <p style="color: #eaeaea; font-weight: 300; max-width: 550px; margin-top: 1.5rem; text-shadow: 0 2px 8px rgba(0,0,0,0.4);">
-          Where fashion meets wellness. Sourcing iconic organic faucet carvings and woven stainless steel surfaces that redefine luxury vanity spaces.
+  
+  <main style="margin-top: var(--header-height);">
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-tag" style="display: block; margin-bottom: 1rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.8rem; font-weight: 600;">Premium Fenestration</span>
+        <h1 class="page-title reveal">Windows Collection</h1>
+        <p class="page-subtitle reveal" style="transition-delay: 0.1s;">
+          Discover our exclusive range of premium window systems. Merging architectural elegance with uncompromising durability and insulation for modern living spaces.
         </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Hero Product Spotlight -->
-  <section class="brand-featured-product">
-    <div class="container">
-      <div class="editorial-grid">
-        <div class="editorial-col-6 reveal">
-          <span class="section-tag">Flagship Masterpiece</span>
-          <h2 class="section-title">Gessi 316 Intreccio</h2>
-          <p style="margin-bottom: 1.8rem; font-weight: 300;">
-            The Gessi 316 Intreccio represents high-fashion Italian manufacturing. Crafted from pure marine-grade stainless steel, displaying a delicate woven metal texture finish.
-          </p>
-          <p style="margin-bottom: 2.2rem; font-weight: 300; font-style: italic;" class="text-gold">
-            A cylindrical vessel deck mixer exhibiting a rich tactile pattern, available in steel, brushed copper, matte black, and gold PVD textures.
-          </p>
-          <a href="contact.html?inquiry=Gessi-316-Intreccio" class="btn-primary magnetic-btn">Enquire About This Setup</a>
-        </div>
-        <div class="editorial-col-6 reveal">
-          <div class="editorial-img-wrap" style="aspect-ratio: 16 / 11;">
-            <img src="images/bathroom-fittings.jpg" alt="Gessi 316 Intreccio Faucet">
-          </div>
+    <!-- Showroom Grid Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="showroom-grid reveal" style="transition-delay: 0.2s;">
+
+              <div class="grid-item" onclick="openLightbox('Windows/VA2200.png')">
+                <img src="Windows/VA2200.png" alt="VA2200" class="grid-img">
+                <div class="grid-overlay">
+                  <span class="grid-category">VA2200</span>
+                </div>
+              </div>
+
+              <div class="grid-item" onclick="openLightbox('Windows/VA28.png')">
+                <img src="Windows/VA28.png" alt="VA28" class="grid-img">
+                <div class="grid-overlay">
+                  <span class="grid-category">VA28</span>
+                </div>
+              </div>
+
+              <div class="grid-item" onclick="openLightbox('Windows/VA28C.png')">
+                <img src="Windows/VA28C.png" alt="VA28C" class="grid-img">
+                <div class="grid-overlay">
+                  <span class="grid-category">VA28C</span>
+                </div>
+              </div>
+
+              <div class="grid-item" onclick="openLightbox('Windows/VA28R.png')">
+                <img src="Windows/VA28R.png" alt="VA28R" class="grid-img">
+                <div class="grid-overlay">
+                  <span class="grid-category">VA28R</span>
+                </div>
+              </div>
+
+              <div class="grid-item" onclick="openLightbox('Windows/VA28Spro.png')">
+                <img src="Windows/VA28Spro.png" alt="VA28Spro" class="grid-img">
+                <div class="grid-overlay">
+                  <span class="grid-category">VA28Spro</span>
+                </div>
+              </div>
+
+              <div class="grid-item" onclick="openLightbox('Windows/VA28pro.png')">
+                <img src="Windows/VA28pro.png" alt="VA28pro" class="grid-img">
+                <div class="grid-overlay">
+                  <span class="grid-category">VA28pro</span>
+                </div>
+              </div>
+
+              <div class="grid-item" onclick="openLightbox('Windows/VA3000.png')">
+                <img src="Windows/VA3000.png" alt="VA3000" class="grid-img">
+                <div class="grid-overlay">
+                  <span class="grid-category">VA3000</span>
+                </div>
+              </div>
+
+              <div class="grid-item" onclick="openLightbox('Windows/VA3500.png')">
+                <img src="Windows/VA3500.png" alt="VA3500" class="grid-img">
+                <div class="grid-overlay">
+                  <span class="grid-category">VA3500</span>
+                </div>
+              </div>
+
+              <div class="grid-item" onclick="openLightbox('Windows/VA38Cpro.png')">
+                <img src="Windows/VA38Cpro.png" alt="VA38Cpro" class="grid-img">
+                <div class="grid-overlay">
+                  <span class="grid-category">VA38Cpro</span>
+                </div>
+              </div>
+
+              <div class="grid-item" onclick="openLightbox('Windows/VA38Spro.png')">
+                <img src="Windows/VA38Spro.png" alt="VA38Spro" class="grid-img">
+                <div class="grid-overlay">
+                  <span class="grid-category">VA38Spro</span>
+                </div>
+              </div>
+
+              <div class="grid-item" onclick="openLightbox('Windows/VA38pro.png')">
+                <img src="Windows/VA38pro.png" alt="VA38pro" class="grid-img">
+                <div class="grid-overlay">
+                  <span class="grid-category">VA38pro</span>
+                </div>
+              </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Brand Products Grid (5-6 Products) -->
-  <section class="section-padding" style="background-color: var(--bg-primary);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">The Curation</span>
-        <h2 class="section-title">Featured Gessi Catalog</h2>
-        <p class="section-desc">Select designer basins and taps displayed at the Home Studio Surat gallery.</p>
-      </div>
-      
-      <div class="brand-product-grid">
-        <!-- Product 1 -->
-        <div class="brand-product-card reveal">
-          <div class="card-img-wrap">
-            <img src="images/bathroom-fittings.jpg" alt="Gessi Origini Basin Mixer" class="card-img">
-          </div>
-          <div class="brand-product-info">
-            <h3 class="brand-product-title">Origini Basin Mixer</h3>
-            <p class="brand-product-desc">Contemporary organic deck faucet displaying soft clay colors, matte textures, and round designer cartridges.</p>
-            
-            <div class="spec-accordion">
-              <div class="spec-accordion-item">
-                <div class="spec-accordion-header">Specifications</div>
-                <div class="spec-accordion-content">
-                  <div class="spec-accordion-content-inner">
-                    <div class="spec-list">
-                      <div class="spec-list-item"><span>Design Series</span><span>Origini Haute Couture</span></div>
-                      <div class="spec-list-item"><span>Faucets style</span><span>Single lever basin mixer</span></div>
-                      <div class="spec-list-item"><span>Finish</span><span>Matte Cipria powder coating</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <a href="contact.html?inquiry=Gessi-Origini-Mixer" class="btn-primary" style="margin-top: 1.5rem; padding: 0.8rem 1.5rem; font-size: 0.75rem; justify-content: center; width: 100%;">Enquire Now</a>
-          </div>
-        </div>
-        
-        <!-- Product 2 -->
-        <div class="brand-product-card reveal reveal-delay-1">
-          <div class="card-img-wrap">
-            <img src="images/bathroom-fittings.jpg" alt="Gessi Rettangolo mixer tap" class="card-img">
-          </div>
-          <div class="brand-product-info">
-            <h3 class="brand-product-title">Rettangolo Classic Tap</h3>
-            <p class="brand-product-desc">An iconic geometric square basin faucet that pioneered minimalist square bathroom fixtures globally.</p>
-            
-            <div class="spec-accordion">
-              <div class="spec-accordion-item">
-                <div class="spec-accordion-header">Specifications</div>
-                <div class="spec-accordion-content">
-                  <div class="spec-accordion-content-inner">
-                    <div class="spec-list">
-                      <div class="spec-list-item"><span>Geometric style</span><span>Concealed rectangular profile</span></div>
-                      <div class="spec-list-item"><span>Plating</span><span>High-thickness Chrome polish</span></div>
-                      <div class="spec-list-item"><span>Spout Project</span><span>165 mm extension length</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <a href="contact.html?inquiry=Gessi-Rettangolo-Tap" class="btn-primary" style="margin-top: 1.5rem; padding: 0.8rem 1.5rem; font-size: 0.75rem; justify-content: center; width: 100%;">Enquire Now</a>
-          </div>
-        </div>
-        
-        <!-- Product 3 -->
-        <div class="brand-product-card reveal reveal-delay-2">
-          <div class="card-img-wrap">
-            <img src="images/showroom-interior.jpg" alt="Gessi Tremila wellness shower" class="card-img">
-          </div>
-          <div class="brand-product-info">
-            <h3 class="brand-product-title">Tremila Multi-Flow Shower</h3>
-            <p class="brand-product-desc">Designer thin overhead shower mixer showcasing customizable atomizing mists and light chromotherapy rings.</p>
-            
-            <div class="spec-accordion">
-              <div class="spec-accordion-item">
-                <div class="spec-accordion-header">Specifications</div>
-                <div class="spec-accordion-content">
-                  <div class="spec-accordion-content-inner">
-                    <div class="spec-list">
-                      <div class="spec-list-item"><span>Shower Plate</span><span>Slim 6mm ceiling plate</span></div>
-                      <div class="spec-list-item"><span>Therapy</span><span>LED Chromotherapy rings (12 colors)</span></div>
-                      <div class="spec-list-item"><span>Flow Modes</span><span>Aerosol mist / Rain shower cascade</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <a href="contact.html?inquiry=Gessi-Tremila-Shower" class="btn-primary" style="margin-top: 1.5rem; padding: 0.8rem 1.5rem; font-size: 0.75rem; justify-content: center; width: 100%;">Enquire Now</a>
-          </div>
-        </div>
-        
-        <!-- Product 4 -->
-        <div class="brand-product-card reveal">
-          <div class="card-img-wrap">
-            <img src="images/bathroom-fittings.jpg" alt="Gessi Cono tap" class="card-img">
-          </div>
-          <div class="brand-product-info">
-            <h3 class="brand-product-title">Cono Organic Mixer</h3>
-            <p class="brand-product-desc">Basin deck mixer displaying a soft conical drop shape that blends natural curves with metal finishes.</p>
-            
-            <div class="spec-accordion">
-              <div class="spec-accordion-item">
-                <div class="spec-accordion-header">Specifications</div>
-                <div class="spec-accordion-content">
-                  <div class="spec-accordion-content-inner">
-                    <div class="spec-list">
-                      <div class="spec-list-item"><span>Shape</span><span>Conical drop organic sculpture</span></div>
-                      <div class="spec-list-item"><span>Cartridge</span><span>High-load ceramic design cartridge</span></div>
-                      <div class="spec-list-item"><span>Finish</span><span>Brushed Gold / Matte White</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <a href="contact.html?inquiry=Gessi-Cono-Mixer" class="btn-primary" style="margin-top: 1.5rem; padding: 0.8rem 1.5rem; font-size: 0.75rem; justify-content: center; width: 100%;">Enquire Now</a>
-          </div>
-        </div>
-        
-        <!-- Product 5 -->
-        <div class="brand-product-card reveal reveal-delay-1">
-          <div class="card-img-wrap">
-            <img src="images/showroom-interior.jpg" alt="Gessi Wellness ceiling shower panel" class="card-img">
-          </div>
-          <div class="brand-product-info">
-            <h3 class="brand-product-title">Spotwater Ceiling Outlets</h3>
-            <p class="brand-product-desc">Minimalist tubular shower nozzles that mount to the ceiling, providing precise rain, mist, or waterfall projections.</p>
-            
-            <div class="spec-accordion">
-              <div class="spec-accordion-item">
-                <div class="spec-accordion-header">Specifications</div>
-                <div class="spec-accordion-content">
-                  <div class="spec-accordion-content-inner">
-                    <div class="spec-list">
-                      <div class="spec-list-item"><span>Nozzles</span><span>Adjustable multi-directional ball joints</span></div>
-                      <div class="spec-list-item"><span>Mounting</span><span>Flush structural ceiling mounts</span></div>
-                      <div class="spec-list-item"><span>Finish</span><span>Satin Steel / Brushed Copper</span></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <a href="contact.html?inquiry=Gessi-Spotwater-Outlets" class="btn-primary" style="margin-top: 1.5rem; padding: 0.8rem 1.5rem; font-size: 0.75rem; justify-content: center; width: 100%;">Enquire Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Detailed Footer -->
+  <div class="lightbox" id="showroomLightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img src="" alt="Enlarged View" class="lightbox-img" id="lightboxImg">
+  </div>
+  
   <footer>
     <div class="container footer-grid">
       <div>
@@ -430,7 +456,7 @@
           <li><a href="products.html?cat=sanitary">Sanitary Ware</a></li>
           <li><a href="products.html?cat=tiles">Ceramic & Marble Tiles</a></li>
           <li><a href="products.html?cat=wellness">Steam, Sauna & Spa</a></li>
-          <li><a href="windows.html">Premium Windows</a></li>
+          <li><a href="products.html?cat=windows">Premium Windows</a></li>
         </ul>
       </div>
       
@@ -489,5 +515,39 @@
   </footer>
 
   <script src="js/main.js?v=6"></script>
+  <script>
+    // Lightbox Logic
+    const lightbox = document.getElementById('showroomLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden'; // prevent background scrolling
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      setTimeout(() => {
+        lightboxImg.src = '';
+      }, 300);
+      document.body.style.overflow = '';
+    }
+
+    // Close on background click
+    lightbox.addEventListener('click', (e) => {
+      if(e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>
+
