@@ -199,7 +199,7 @@ function initScrollReveals() {
   });
 }
 
-/* --- Mega Menu Hover Delay Timing --- */
+/* --- Mega Menu Hover & Responsive Navigation System --- */
 function initMegaMenuHover() {
   const navItems = document.querySelectorAll('.nav-item');
   
@@ -209,25 +209,59 @@ function initMegaMenuHover() {
     
     let timeoutId;
     
+    // Mouse hover handlers for Desktop (> 900px)
     item.addEventListener('mouseenter', () => {
       clearTimeout(timeoutId);
-      megaMenu.style.display = 'grid';
-      setTimeout(() => {
-        megaMenu.style.opacity = '1';
-        megaMenu.style.visibility = 'visible';
-        megaMenu.style.transform = 'translateY(0)';
-        megaMenu.style.pointerEvents = 'auto';
-      }, 50);
+      if (window.innerWidth <= 900) return;
+      
+      // Close other open mega menus
+      document.querySelectorAll('.mega-menu.is-open').forEach(menu => {
+        if (menu !== megaMenu) menu.classList.remove('is-open');
+      });
+      
+      megaMenu.classList.add('is-open');
     });
     
     item.addEventListener('mouseleave', () => {
       timeoutId = setTimeout(() => {
-        megaMenu.style.opacity = '0';
-        megaMenu.style.visibility = 'hidden';
-        megaMenu.style.transform = 'translateY(-10px)';
-        megaMenu.style.pointerEvents = 'none';
+        megaMenu.classList.remove('is-open');
       }, 150);
     });
+
+    // Touch support for tablets (e.g. iPad 901px - 1100px)
+    const navLink = item.querySelector('.nav-link');
+    if (navLink) {
+      navLink.addEventListener('click', (e) => {
+        if (window.innerWidth > 900) {
+          // If menu is not open yet, reveal menu on first click/tap
+          if (!megaMenu.classList.contains('is-open')) {
+            e.preventDefault();
+            document.querySelectorAll('.mega-menu.is-open').forEach(menu => {
+              if (menu !== megaMenu) menu.classList.remove('is-open');
+            });
+            megaMenu.classList.add('is-open');
+          }
+        }
+      });
+    }
+  });
+
+  // Close open mega menu if clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.mega-menu.is-open').forEach(menu => {
+        menu.classList.remove('is-open');
+      });
+    }
+  });
+
+  // Close mega menus on window resize down to mobile
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 900) {
+      document.querySelectorAll('.mega-menu.is-open').forEach(menu => {
+        menu.classList.remove('is-open');
+      });
+    }
   });
 }
 

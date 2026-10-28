@@ -360,6 +360,14 @@ header.header-scrolled {
   z-index: 998;
 }
 
+.nav-item:hover .mega-menu:not(.mega-menu-compact),
+.mega-menu:not(.mega-menu-compact).is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 .mega-column {
   border-right: 1px solid var(--border-color-light);
   padding-right: 2rem;
@@ -1531,25 +1539,59 @@ input, textarea, select {
 }
 
 /* ==========================================================================
-   Compact Brands Mega Menu
+   Compact Brands Mega Menu & Fully Responsive Navigation System
    ========================================================================== */
 .mega-menu.mega-menu-compact {
-  padding: 2rem 3rem;
-  max-width: 1140px;
-  left: 50%;
-  transform: translateX(-50%) translateY(-10px);
+  position: fixed;
+  top: var(--header-height);
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) translateY(-10px) !important;
+  width: min(1140px, calc(100vw - 32px)) !important;
+  max-width: 1140px !important;
+  padding: 1.8rem 2.2rem;
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.65);
   border: 1px solid var(--border-color);
   border-top: none;
   background-color: rgba(18, 18, 18, 0.98);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1.15fr 1.35fr 1.1fr 1.4fr;
+  gap: 1.8rem;
+  max-height: calc(86vh - var(--header-height));
+  overflow-y: auto;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              visibility 0.3s;
+  z-index: 999;
 }
 
-.nav-item:hover .mega-menu.mega-menu-compact {
-  transform: translateX(-50%) translateY(0);
+/* Open state for compact Brands mega menu (Hover & JS class) */
+.nav-item:hover .mega-menu.mega-menu-compact,
+.mega-menu.mega-menu-compact.is-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(-50%) translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+/* Custom Scrollbar for Compact Brands Menu */
+.mega-menu.mega-menu-compact::-webkit-scrollbar {
+  width: 5px;
+}
+.mega-menu.mega-menu-compact::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+}
+.mega-menu.mega-menu-compact::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
 }
 
 .compact-menu-col-title {
@@ -1579,7 +1621,7 @@ input, textarea, select {
   font-size: 0.78rem;
   color: var(--text-secondary);
   text-decoration: none;
-  padding: 0.18rem 0;
+  padding: 0.2rem 0;
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -1594,11 +1636,17 @@ input, textarea, select {
 }
 
 .compact-verade-card {
-  background: linear-gradient(135deg, rgba(197, 168, 128, 0.12) 0%, rgba(35, 35, 35, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(197, 168, 128, 0.14) 0%, rgba(35, 35, 35, 0.95) 100%);
   border: 1px solid var(--accent);
   border-radius: var(--radius-md);
   padding: 1rem 1.1rem;
   margin-bottom: 0.9rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.compact-verade-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(197, 168, 128, 0.15);
 }
 
 .compact-verade-badge {
@@ -1617,6 +1665,7 @@ input, textarea, select {
   color: #fff;
   margin-bottom: 0.2rem;
   font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
 .compact-verade-desc {
@@ -1633,7 +1682,9 @@ input, textarea, select {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .compact-verade-btn:hover {
@@ -1661,5 +1712,214 @@ input, textarea, select {
   border-color: var(--accent);
   color: var(--accent);
   background: rgba(197, 168, 128, 0.08);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints for Desktop, Tablet & Mobile Navigation
+   ========================================================================== */
+
+/* Full Desktop (>= 1181px): 4 Clean Columns */
+@media (min-width: 1181px) {
+  .mega-menu.mega-menu-compact > .mega-column {
+    border-right: 1px solid var(--border-color-light) !important;
+    padding-right: 1.5rem !important;
+  }
+  .mega-menu.mega-menu-compact > .mega-column:last-child {
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Tablet Landscape & Compact Laptops (901px - 1180px) */
+@media (max-width: 1180px) and (min-width: 901px) {
+  .nav-menu {
+    gap: 1.8rem;
+  }
+  .nav-link {
+    font-size: 0.74rem;
+    letter-spacing: 0.12em;
+  }
+  .mega-menu.mega-menu-compact {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.6rem 2.2rem !important;
+    padding: 1.5rem 1.8rem !important;
+    width: calc(100vw - 32px) !important;
+    max-height: calc(80vh - var(--header-height)) !important;
+  }
+  .mega-menu.mega-menu-compact > .mega-column:nth-child(1),
+  .mega-menu.mega-menu-compact > .mega-column:nth-child(3) {
+    border-right: 1px solid var(--border-color-light) !important;
+    padding-right: 1.8rem !important;
+  }
+  .mega-menu.mega-menu-compact > .mega-column:nth-child(2),
+  .mega-menu.mega-menu-compact > div:nth-child(4) {
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+  .compact-brand-link {
+    font-size: 0.8rem;
+    padding: 0.22rem 0;
+  }
+}
+
+/* Mobile Viewport: Strictly disable desktop mega-menus */
+@media (max-width: 900px) {
+  .mega-menu,
+  .mega-menu.mega-menu-compact {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: none !important;
+  }
+}
+
+/* Mobile Drawer Brands Accordion & Responsive Touch Grid */
+.mobile-brand-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.45rem 0.65rem;
+  margin-bottom: 1.1rem;
+}
+
+.mobile-brand-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-sm);
+  padding: 0.52rem 0.4rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 38px;
+}
+
+.mobile-brand-pill:hover,
+.mobile-brand-pill:active {
+  background: rgba(197, 168, 128, 0.12);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.mobile-verade-card {
+  background: linear-gradient(135deg, rgba(197, 168, 128, 0.14) 0%, rgba(30, 30, 30, 0.9) 100%);
+  border: 1px solid var(--accent);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.mobile-verade-badge {
+  display: block;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.15rem;
+}
+
+.mobile-verade-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.mobile-verade-btn {
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: rgba(197, 168, 128, 0.12);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.mobile-verade-btn:hover,
+.mobile-verade-btn:active {
+  background: var(--accent);
+  color: #121212;
+}
+
+/* Fallback styling for existing inline-style grids inside mobile drawer */
+.mobile-nav-accordion-body div[style*="grid-template-columns"] {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0.45rem 0.65rem !important;
+  margin-bottom: 1.1rem !important;
+}
+
+.mobile-nav-accordion-body div[style*="grid-template-columns"] a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+  color: var(--text-secondary) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 0.52rem 0.4rem !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  min-height: 38px !important;
+}
+
+.mobile-nav-accordion-body div[style*="grid-template-columns"] a:hover,
+.mobile-nav-accordion-body div[style*="grid-template-columns"] a:active {
+  background: rgba(197, 168, 128, 0.12) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Compact mobile phone screen adaptations (<= 400px) */
+@media (max-width: 400px) {
+  .mobile-drawer {
+    padding: 6.5rem 1.4rem 2.5rem !important;
+  }
+  .mobile-brand-pill,
+  .mobile-nav-accordion-body div[style*="grid-template-columns"] a {
+    font-size: 0.78rem !important;
+    padding: 0.42rem 0.25rem !important;
+    min-height: 34px !important;
+  }
+  .mobile-verade-card {
+    padding: 0.75rem 0.9rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .mobile-verade-btn {
+    align-self: flex-start !important;
+    margin-top: 0.4rem !important;
+  }
 }
 

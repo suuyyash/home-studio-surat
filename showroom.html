@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience Center Showroom | Home Studio Surat</title>
   <meta name="description" content="Explore our state-of-the-art 19,500 sq.ft. showroom in Surat. Discover live displays of luxury wellness spas, architectural tiles, and premium sanitaryware setups.">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
   <link rel="stylesheet" href="css/animations.css">
 
   <style>
@@ -264,7 +264,7 @@
             </div>
 
             <!-- Column 4: CP Fittings & Wellness -->
-            <div>
+            <div class="mega-column">
               <div class="compact-menu-col-title">CP Fittings & Sanitary</div>
               <div class="compact-brand-grid-2col">
                 <a href="brand-artize.html" class="compact-brand-link">Artize</a>
@@ -370,64 +370,69 @@
       <div class="mobile-nav-item-accordion">
         <div class="mobile-nav-accordion-header">
           <a href="bathroom-fittings.html" class="mobile-nav-link">Brands</a>
-          <button class="mobile-accordion-btn" aria-label="Toggle Brands Submenu">+</button>
+          <button type="button" class="mobile-accordion-btn" aria-label="Toggle Brands Submenu">+</button>
         </div>
         <div class="mobile-nav-accordion-body">
-          <div class="mobile-submenu-group" style="margin-bottom: 0.5rem;">
-            <a href="bathroom-fittings.html" class="mobile-submenu-link text-gold" style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.8rem; display: block;">Brand Directory Overview →</a>
+          <div class="mobile-submenu-group" style="margin-bottom: 0.8rem;">
+            <a href="bathroom-fittings.html" class="mobile-submenu-link text-gold" style="font-weight: 600; font-size: 1.05rem; display: block;">Brand Directory Overview (31 Brands) →</a>
           </div>
 
-          <!-- Windows Category -->
-          <div style="background: rgba(197, 168, 128, 0.1); border-left: 3px solid var(--accent); padding: 0.6rem 0.8rem; margin-bottom: 0.8rem; border-radius: 4px;">
-            <span style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; display: block;">★ Featured Windows</span>
-            <a href="brand-verade.html" class="mobile-submenu-link" style="color: #fff; font-weight: 600; padding: 0.2rem 0;">VERADE WINDOWS</a>
+          <!-- Featured Windows Partner -->
+          <div class="mobile-verade-card">
+            <div>
+              <span class="mobile-verade-badge">★ Featured Windows</span>
+              <div class="mobile-verade-title">VERADE</div>
+            </div>
+            <a href="brand-verade.html" class="mobile-verade-btn">Explore →</a>
           </div>
 
           <!-- Tiles Category -->
-          <span class="mobile-submenu-title" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); margin: 0.8rem 0 0.4rem;">Tiles (Domestic)</span>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.2rem 0.5rem; margin-bottom: 0.6rem;">
-            <a href="brand-creanza.html" class="mobile-submenu-link">Creanza</a>
-            <a href="brand-dimore.html" class="mobile-submenu-link">Dimore</a>
-            <a href="brand-itaca.html" class="mobile-submenu-link">Itaca</a>
-            <a href="brand-kajaria.html" class="mobile-submenu-link">Kajaria</a>
-            <a href="brand-marfil.html" class="mobile-submenu-link">Marfil</a>
-            <a href="brand-neotra.html" class="mobile-submenu-link">Neotra</a>
-            <a href="brand-nexion.html" class="mobile-submenu-link">Nexion</a>
-            <a href="brand-palladio.html" class="mobile-submenu-link">Palladio</a>
-            <a href="brand-piccolo.html" class="mobile-submenu-link">Piccolo</a>
-            <a href="brand-qutone.html" class="mobile-submenu-link">Qutone</a>
-            <a href="brand-simero.html" class="mobile-submenu-link">Simero</a>
-            <a href="brand-verona.html" class="mobile-submenu-link">Verona</a>
+          <span class="mobile-submenu-title" style="display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); margin: 0.8rem 0 0.45rem;">Tiles (Domestic)</span>
+          <div class="mobile-brand-grid">
+            <a href="brand-creanza.html" class="mobile-brand-pill">Creanza</a>
+            <a href="brand-dimore.html" class="mobile-brand-pill">Dimore</a>
+            <a href="brand-itaca.html" class="mobile-brand-pill">Itaca</a>
+            <a href="brand-kajaria.html" class="mobile-brand-pill">Kajaria</a>
+            <a href="brand-marfil.html" class="mobile-brand-pill">Marfil</a>
+            <a href="brand-neotra.html" class="mobile-brand-pill">Neotra</a>
+            <a href="brand-nexion.html" class="mobile-brand-pill">Nexion</a>
+            <a href="brand-palladio.html" class="mobile-brand-pill">Palladio</a>
+            <a href="brand-piccolo.html" class="mobile-brand-pill">Piccolo</a>
+            <a href="brand-qutone.html" class="mobile-brand-pill">Qutone</a>
+            <a href="brand-simero.html" class="mobile-brand-pill">Simero</a>
+            <a href="brand-verona.html" class="mobile-brand-pill">Verona</a>
           </div>
 
-          <span class="mobile-submenu-title" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); margin: 0.8rem 0 0.4rem;">Tiles (Imported)</span>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.2rem 0.5rem; margin-bottom: 0.6rem;">
-            <a href="brand-casabath.html" class="mobile-submenu-link">Casabath</a>
-            <a href="brand-dvg.html" class="mobile-submenu-link">DVG</a>
-            <a href="brand-emilgroup.html" class="mobile-submenu-link">Emil Group</a>
-            <a href="brand-kpm.html" class="mobile-submenu-link">KPM</a>
-            <a href="brand-milagro.html" class="mobile-submenu-link">Milagro</a>
-            <a href="brand-scpl.html" class="mobile-submenu-link">SCPL</a>
+          <span class="mobile-submenu-title" style="display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); margin: 0.8rem 0 0.45rem;">Tiles (Imported)</span>
+          <div class="mobile-brand-grid">
+            <a href="brand-casabath.html" class="mobile-brand-pill">Casabath</a>
+            <a href="brand-dvg.html" class="mobile-brand-pill">DVG</a>
+            <a href="brand-emilgroup.html" class="mobile-brand-pill">Emil Group</a>
+            <a href="brand-kpm.html" class="mobile-brand-pill">KPM</a>
+            <a href="brand-milagro.html" class="mobile-brand-pill">Milagro</a>
+            <a href="brand-scpl.html" class="mobile-brand-pill">SCPL</a>
           </div>
 
           <!-- CP Fittings Category -->
-          <span class="mobile-submenu-title" style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); margin: 0.8rem 0 0.4rem;">CP Fittings & Sanitary</span>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.2rem 0.5rem;">
-            <a href="brand-artize.html" class="mobile-submenu-link">Artize</a>
-            <a href="brand-axor.html" class="mobile-submenu-link">Axor</a>
-            <a href="brand-blanco.html" class="mobile-submenu-link">Blanco</a>
-            <a href="brand-carysil.html" class="mobile-submenu-link">Carysil</a>
-            <a href="brand-geberit.html" class="mobile-submenu-link">Geberit</a>
-            <a href="brand-grohe.html" class="mobile-submenu-link">Grohe</a>
-            <a href="brand-hansgrohe.html" class="mobile-submenu-link">Hansgrohe</a>
-            <a href="brand-jaquar.html" class="mobile-submenu-link">Jaquar</a>
-            <a href="brand-oyster.html" class="mobile-submenu-link">Oyster</a>
-            <a href="brand-stiebel.html" class="mobile-submenu-link">Stiebel</a>
-            <a href="brand-tece.html" class="mobile-submenu-link">Tece</a>
-            <a href="brand-toto.html" class="mobile-submenu-link">Toto</a>
+          <span class="mobile-submenu-title" style="display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); margin: 0.8rem 0 0.45rem;">CP Fittings & Sanitary</span>
+          <div class="mobile-brand-grid">
+            <a href="brand-artize.html" class="mobile-brand-pill">Artize</a>
+            <a href="brand-axor.html" class="mobile-brand-pill">Axor</a>
+            <a href="brand-blanco.html" class="mobile-brand-pill">Blanco</a>
+            <a href="brand-carysil.html" class="mobile-brand-pill">Carysil</a>
+            <a href="brand-geberit.html" class="mobile-brand-pill">Geberit</a>
+            <a href="brand-grohe.html" class="mobile-brand-pill">Grohe</a>
+            <a href="brand-hansgrohe.html" class="mobile-brand-pill">Hansgrohe</a>
+            <a href="brand-jaquar.html" class="mobile-brand-pill">Jaquar</a>
+            <a href="brand-oyster.html" class="mobile-brand-pill">Oyster</a>
+            <a href="brand-stiebel.html" class="mobile-brand-pill">Stiebel</a>
+            <a href="brand-tece.html" class="mobile-brand-pill">Tece</a>
+            <a href="brand-toto.html" class="mobile-brand-pill">Toto</a>
           </div>
         </div>
       </div>
+
+      
 
       <a href="showroom.html" class="mobile-nav-link">Showroom</a>
       <a href="about.html" class="mobile-nav-link">About Us</a>
@@ -673,7 +678,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=6"></script>
+  <script src="js/main.js?v=8"></script>
   <script>
     // Filtering logic
     const filterBtns = document.querySelectorAll('.filter-btn');
