@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 100" width="380" height="100">
+  <style>
+    .brand-title { font-family: "Cinzel", "Montserrat", "Helvetica Neue", sans-serif; font-weight: 800; font-size: 44px; fill: #ffffff; letter-spacing: 0.25em; text-anchor: middle; }
+    .brand-sub { font-family: "Montserrat", "Helvetica Neue", sans-serif; font-weight: 400; font-size: 10px; fill: #c5a880; letter-spacing: 0.42em; text-anchor: middle; }
+  </style>
+  <text x="190" y="52" class="brand-title">KPM</text>
+  <text x="190" y="78" class="brand-sub">PORCELAIN &bull; BRICK &bull; SURFACES</text>
+</svg>

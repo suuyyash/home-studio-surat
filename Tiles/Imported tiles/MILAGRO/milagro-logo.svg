@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <style>
+    .brand-title { font-family: "Montserrat", "Helvetica Neue", sans-serif; font-weight: 700; font-size: 38px; fill: #ffffff; letter-spacing: 0.35em; text-anchor: middle; }
+    .brand-sub { font-family: "Montserrat", "Helvetica Neue", sans-serif; font-weight: 400; font-size: 10px; fill: #c5a880; letter-spacing: 0.5em; text-anchor: middle; }
+  </style>
+  <text x="200" y="52" class="brand-title">MILAGRO</text>
+  <text x="200" y="78" class="brand-sub">CONTEMPORARY SURFACES</text>
+</svg>

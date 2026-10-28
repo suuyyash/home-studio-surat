@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" width="460" height="120">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dfc59f" />
+      <stop offset="50%" stop-color="#c5a880" />
+      <stop offset="100%" stop-color="#9d8058" />
+    </linearGradient>
+  </defs>
+  <style>
+    .v-text { font-family: "Cinzel", "Montserrat", "Georgia", serif; font-weight: 700; font-size: 44px; fill: #ffffff; letter-spacing: 0.38em; text-anchor: middle; }
+    .v-sub { font-family: "Montserrat", "Helvetica Neue", sans-serif; font-weight: 500; font-size: 10.5px; fill: url(#goldGrad); letter-spacing: 0.42em; text-anchor: middle; text-transform: uppercase; }
+  </style>
+  <rect x="208" y="10" width="44" height="26" fill="none" stroke="url(#goldGrad)" stroke-width="2" rx="2" />
+  <line x1="230" y1="10" x2="230" y2="36" stroke="url(#goldGrad)" stroke-width="1.5" />
+  <text x="238" y="78" class="v-text">VERADE</text>
+  <text x="238" y="104" class="v-sub">ARCHITECTURAL WINDOW SYSTEMS</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <style>
+    .brand-title { font-family: "Montserrat", "Helvetica Neue", "Arial", sans-serif; font-weight: 700; font-size: 38px; fill: #ffffff; letter-spacing: 0.32em; text-anchor: middle; }
+    .brand-sub { font-family: "Montserrat", "Helvetica Neue", sans-serif; font-weight: 400; font-size: 11px; fill: #c5a880; letter-spacing: 0.55em; text-anchor: middle; text-transform: uppercase; }
+  </style>
+  <text x="200" y="52" class="brand-title">CASABATH</text>
+  <text x="200" y="78" class="brand-sub">ITALIA &bull; ARCHITECTURE</text>
+</svg>
