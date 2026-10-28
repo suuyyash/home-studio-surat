@@ -1358,3 +1358,308 @@ input, textarea, select {
 [data-theme="dark"] .stacking-section {
   box-shadow: 0 -20px 50px rgba(0,0,0,0.4);
 }
+
+/* ==========================================================================
+   Brand Pages Dedicated Luxury Styling & Compact Navigation
+   ========================================================================== */
+
+/* Brand Header Minimal */
+.brand-header-minimal {
+  padding-top: calc(var(--header-height) + 3.5rem);
+  padding-bottom: 2.5rem;
+  text-align: center;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.brand-logo-large {
+  max-width: 320px;
+  max-height: 100px;
+  margin: 0 auto 1.5rem;
+  display: block;
+  object-fit: contain;
+}
+
+/* Main Feature Video Section */
+.brand-main-feature {
+  background-color: var(--bg-primary);
+  padding: 3.5rem 0 5rem;
+}
+
+.main-feature-media {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  background: #000;
+  border: 1px solid var(--border-color);
+}
+
+.main-video, .main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hero Product Section (Split Screen) */
+.hero-product-section {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 6rem 0;
+}
+
+.hero-product-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.hero-product-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-tertiary);
+  display: block;
+}
+
+/* Brand Product Portfolio Grid */
+.brand-products-section {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+  padding: 6rem 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.product-card {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  border-color: var(--accent);
+}
+
+.product-img-wrapper {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background-color: var(--bg-tertiary);
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  display: block;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 2rem 1.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  background-color: var(--bg-tertiary);
+  border-top: 1px solid var(--border-color);
+}
+
+.product-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+
+.product-action .btn-secondary {
+  width: 100%;
+  display: inline-block;
+  padding: 1rem 1.2rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  transition: all 0.3s ease;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font-weight: 500;
+}
+
+.product-action .btn-secondary:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+@media (max-width: 900px) {
+  .hero-product-split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   Compact Brands Mega Menu
+   ========================================================================== */
+.mega-menu.mega-menu-compact {
+  padding: 2rem 3rem;
+  max-width: 1140px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  border: 1px solid var(--border-color);
+  border-top: none;
+  background-color: rgba(18, 18, 18, 0.98);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  gap: 2rem;
+}
+
+.nav-item:hover .mega-menu.mega-menu-compact {
+  transform: translateX(-50%) translateY(0);
+}
+
+.compact-menu-col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(197, 168, 128, 0.25);
+}
+
+.compact-brand-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.compact-brand-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.3rem 0.8rem;
+}
+
+.compact-brand-link {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.18rem 0;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.2s ease;
+  font-weight: 400;
+}
+
+.compact-brand-link:hover {
+  color: var(--accent);
+  transform: translateX(3px);
+}
+
+.compact-verade-card {
+  background: linear-gradient(135deg, rgba(197, 168, 128, 0.12) 0%, rgba(35, 35, 35, 0.9) 100%);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+.compact-verade-badge {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.compact-verade-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.compact-verade-desc {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+}
+
+.compact-verade-btn {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.compact-verade-btn:hover {
+  text-decoration: underline;
+}
+
+.compact-all-brands-btn {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.compact-all-brands-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(197, 168, 128, 0.08);
+}
+
