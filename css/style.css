@@ -890,6 +890,26 @@ header.header-scrolled {
   }
 }
 
+/* --- Verade Featured Highlight Card --- */
+.verade-featured-card {
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(135deg, rgba(197,168,128,0.06) 0%, var(--bg-primary) 100%);
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .verade-featured-card {
+    grid-template-columns: 1fr;
+  }
+  .verade-featured-card > div:first-child {
+    max-height: 220px !important;
+  }
+}
+
 .card-tag {
   font-size: 0.75rem;
   font-weight: 600;
@@ -942,7 +962,11 @@ header.header-scrolled {
 .marquee-container {
   display: flex;
   width: max-content;
-  animation: marquee 45s linear infinite;
+  animation: marquee 75s linear infinite;
+}
+
+.brand-marquee-section:hover .marquee-container {
+  animation-play-state: paused;
 }
 
 .marquee-slide {
