@@ -192,12 +192,12 @@ axor_content = """
         <!-- Product 3 -->
         <div class="product-card reveal">
           <div class="product-img-wrapper">
-            <img src="BRAND/AXOR/axor-axorstarckv.jpg" alt="AXOR Starck V" class="product-img">
+            <img src="BRAND/AXOR/axor-axorstarckv.jpg" alt="AXOR Starck 5" class="product-img">
           </div>
           <div class="product-info">
-            <h3 class="product-title">AXOR Starck V</h3>
+            <h3 class="product-title">AXOR Starck 5</h3>
             <div class="product-action">
-              <a href="contact.html?product=AXOR+Starck+V" class="btn-secondary">Enquire Now</a>
+              <a href="contact.html?product=AXOR+Starck+5" class="btn-secondary">Enquire Now</a>
             </div>
           </div>
         </div>

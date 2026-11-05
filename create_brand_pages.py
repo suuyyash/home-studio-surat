@@ -172,7 +172,7 @@ axor_content = """
           <img src="BRAND/AXOR/axor_showerselect id.jpg" alt="AXOR ShowerSelect ID" class="brand-gallery-img">
         </div>
         <div class="brand-gallery-item reveal">
-          <img src="BRAND/AXOR/axor-axorstarckv.jpg" alt="AXOR Starck V" class="brand-gallery-img">
+          <img src="BRAND/AXOR/axor-axorstarckv.jpg" alt="AXOR Starck 5" class="brand-gallery-img">
         </div>
         <div class="brand-gallery-item reveal reveal-delay-1">
           <img src="BRAND/AXOR/axor-massaud.jpg" alt="AXOR Massaud" class="brand-gallery-img">
