@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 90" width="400" height="90">
+  <style>
+    .artize-title { font-family: "Cinzel", "Cormorant Garamond", serif; font-weight: 600; font-size: 50px; fill: #ffffff; letter-spacing: 0.3em; text-anchor: middle; }
+    .artize-sub { font-family: "Montserrat", "Helvetica Neue", sans-serif; font-weight: 400; font-size: 11px; fill: #c5a880; letter-spacing: 0.55em; text-anchor: middle; text-transform: uppercase; }
+  </style>
+  <text x="200" y="52" class="artize-title">ARTIZE</text>
+  <text x="200" y="76" class="artize-sub">BORN FROM ART</text>
+</svg>

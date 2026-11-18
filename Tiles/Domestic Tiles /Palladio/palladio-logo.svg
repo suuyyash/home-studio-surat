@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 90" width="420" height="90">
+  <style>
+    .pal-text { font-family: "Cinzel", "Cormorant Garamond", "Times New Roman", serif; font-weight: 700; font-size: 44px; fill: #ffffff; letter-spacing: 0.28em; text-anchor: middle; }
+    .pal-sub { font-family: "Montserrat", "Helvetica Neue", sans-serif; font-weight: 400; font-size: 10.5px; fill: #c5a880; letter-spacing: 0.48em; text-anchor: middle; text-transform: uppercase; }
+  </style>
+  <text x="210" y="50" class="pal-text">PALLADIO</text>
+  <text x="210" y="74" class="pal-sub">LUXURY MOSAICS &bull; ARCHITECTURE</text>
+</svg>

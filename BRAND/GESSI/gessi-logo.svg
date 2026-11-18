@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" width="380" height="90">
   <style>
-    .gessi-title { font-family: "Futura", "Montserrat", "Helvetica Neue", "Arial", sans-serif; font-weight: 700; font-size: 50px; fill: #121212; letter-spacing: 0.28em; text-anchor: middle; }
-    .gessi-sub { font-family: "Montserrat", "Helvetica Neue", sans-serif; font-weight: 500; font-size: 11px; fill: #b28e4e; letter-spacing: 0.55em; text-anchor: middle; text-transform: uppercase; }
+    .gessi-title { font-family: "Futura", "Montserrat", "Helvetica Neue", "Arial", sans-serif; font-weight: 700; font-size: 50px; fill: #ffffff; letter-spacing: 0.28em; text-anchor: middle; }
+    .gessi-sub { font-family: "Montserrat", "Helvetica Neue", sans-serif; font-weight: 500; font-size: 11px; fill: #c5a880; letter-spacing: 0.55em; text-anchor: middle; text-transform: uppercase; }
   </style>
   <text x="190" y="52" class="gessi-title">GESSI</text>
   <text x="190" y="76" class="gessi-sub">MADE IN ITALY</text>

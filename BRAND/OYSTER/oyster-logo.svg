@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" width="380" height="90">
+  <style>
+    .oy-text { font-family: "Cinzel", "Cormorant Garamond", serif; font-weight: 700; font-size: 46px; fill: #ffffff; letter-spacing: 0.32em; text-anchor: middle; }
+    .oy-sub { font-family: "Montserrat", "Helvetica Neue", sans-serif; font-weight: 500; font-size: 10.5px; fill: #c5a880; letter-spacing: 0.5em; text-anchor: middle; text-transform: uppercase; }
+  </style>
+  <text x="190" y="50" class="oy-text">OYSTER</text>
+  <text x="190" y="74" class="oy-sub">WELLNESS &bull; BATH SPAS</text>
+</svg>
