@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 90" width="420" height="90">
+  <style>
+    .hb-title { font-family: "Montserrat", "Helvetica Neue", "Cinzel", "Arial", sans-serif; font-weight: 700; font-size: 42px; fill: #121212; letter-spacing: 0.25em; text-anchor: middle; }
+    .hb-sub { font-family: "Montserrat", "Helvetica Neue", sans-serif; font-weight: 500; font-size: 11px; fill: #b28e4e; letter-spacing: 0.45em; text-anchor: middle; text-transform: uppercase; }
+  </style>
+  <text x="210" y="50" class="hb-title">HEISENBERG</text>
+  <text x="210" y="74" class="hb-sub">GERMAN PRECISION &bull; LUXURY CP</text>
+</svg>

@@ -325,10 +325,7 @@
       max-width: 1400px;
       margin: 0 auto;
       padding: 4rem 5%;
-      display: grid;
-      grid-template-columns: 250px 1fr;
-      gap: 3rem;
-      align-items: start;
+      display: block;
     }
     
     /* Mobile Floating Bar */
@@ -619,14 +616,7 @@
 
     @media (max-width: 900px) {
       .shop-container {
-        grid-template-columns: 1fr;
-        padding-bottom: 120px; /* Space for mobile floating bar */
-      }
-      .sidebar, .top-bar {
-        display: none;
-      }
-      .mobile-filters-bar {
-        display: flex !important;
+        padding: 2.5rem 4%;
       }
     }
   </style>
@@ -918,7 +908,7 @@
       </div>
       <div class="mobile-footer-col" style="text-align: right;">
         <p style="font-weight: 600; margin-bottom: 0.5rem;">Landline</p>
-        <p>(0261) 2631965</p>
+        <p><a href="tel:9099998224" style="color: inherit; text-decoration: none;">9099998224</a></p>
       </div>
     </div>
   </div>
@@ -929,44 +919,12 @@
     <section class="products-hero">
       <div class="container">
         <h1 class="products-title">Imported Tiles</h1>
-        <p class="products-subtitle">Explore our exquisite collection of premium imported tiles across world-class global brands.</p>
+        <p class="products-subtitle">Explore our exquisite collection of premium imported tiles curated from world-class international designers.</p>
       </div>
     </section>
 
     <section class="shop-container">
-      <aside class="sidebar">
-        <h3 class="sidebar-title">Brands</h3>
-        <ul class="brand-list" id="brand-filters">
-          
-          <li class="brand-item">
-            <input type="checkbox" id="brand-CASABATH" value="CASABATH" class="brand-checkbox">
-            <label for="brand-CASABATH" class="brand-label">CASABATH</label>
-          </li>
-          <li class="brand-item">
-            <input type="checkbox" id="brand-DVG" value="DVG" class="brand-checkbox">
-            <label for="brand-DVG" class="brand-label">DVG</label>
-          </li>
-          <li class="brand-item">
-            <input type="checkbox" id="brand-EMIL-GROUP" value="EMIL GROUP" class="brand-checkbox">
-            <label for="brand-EMIL-GROUP" class="brand-label">EMIL GROUP</label>
-          </li>
-          <li class="brand-item">
-            <input type="checkbox" id="brand-KPM" value="KPM" class="brand-checkbox">
-            <label for="brand-KPM" class="brand-label">KPM</label>
-          </li>
-          <li class="brand-item">
-            <input type="checkbox" id="brand-MILAGRO" value="MILAGRO" class="brand-checkbox">
-            <label for="brand-MILAGRO" class="brand-label">MILAGRO</label>
-          </li>
-          <li class="brand-item">
-            <input type="checkbox" id="brand-SCPL" value="SCPL" class="brand-checkbox">
-            <label for="brand-SCPL" class="brand-label">SCPL</label>
-          </li>
-        </ul>
-      </aside>
-      
       <div class="main-content">
-        
         <div class="products-grid" id="products-grid">
           <!-- Products injected via JS -->
         </div>
@@ -976,14 +934,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Mobile Floating Filter Bar -->
-    <div class="mobile-filters-bar" id="mobile-filters-bar">
-      <select id="mobile-brand-select" class="mobile-filter-select" style="margin: 0 auto; max-width: 300px;">
-        <option value="all">Brands</option>
-        <option value="CASABATH">CASABATH</option><option value="DVG">DVG</option><option value="EMIL GROUP">EMIL GROUP</option><option value="KPM">KPM</option><option value="MILAGRO">MILAGRO</option><option value="SCPL">SCPL</option>
-      </select>
-    </div>
   </main>
 <footer>
     <div class="container footer-grid">
@@ -1051,7 +1001,7 @@
         <h4 class="footer-col-title">Experience Center</h4>
         <p class="footer-newsletter-text" style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Shiv Shambhu Ind. Estate, 37-B,<br>Udhana - Magdalla Rd, nr. Chosath Jogni Mata Mandir,<br>Laxmi Nagar, Udhana, Surat, Gujarat 395002</p>
         <p style="font-size: 0.9rem; color: var(--text-primary); font-weight: 500; margin-bottom: 1.5rem;">
-          Landline: (0261) 2631965
+          Landline: <a href="tel:9099998224" style="color: inherit; text-decoration: none;">9099998224</a>
         </p>
         <h4 class="footer-col-title" style="margin-bottom: 0.8rem; font-size: 0.75rem;">Newsletter</h4>
         <form class="newsletter-form" action="#" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
@@ -1080,27 +1030,9 @@
     document.addEventListener('DOMContentLoaded', () => {
       const grid = document.getElementById('products-grid');
       const pagination = document.getElementById('pagination-controls');
-      const brandCheckboxes = document.querySelectorAll('.brand-checkbox');
-      const mobileBrandSelect = document.getElementById('mobile-brand-select');
       
       function renderProducts() {
-        // Determine active filters based on screen size
-        let selectedBrands = [];
-        
-        if (window.innerWidth <= 900) {
-            if (mobileBrandSelect.value !== 'all') {
-                selectedBrands.push(mobileBrandSelect.value);
-            }
-        } else {
-            selectedBrands = Array.from(brandCheckboxes)
-                                  .filter(cb => cb.checked)
-                                  .map(cb => cb.value);
-        }
-                                  
-        let filtered = productsData.filter(p => {
-          const matchBrand = selectedBrands.length === 0 || selectedBrands.includes(p.brand);
-          return matchBrand;
-        });
+        const filtered = productsData;
         
         // Paginate
         const totalPages = Math.ceil(filtered.length / itemsPerPage);
@@ -1112,7 +1044,7 @@
         // Render Grid
         grid.innerHTML = '';
         if (paginated.length === 0) {
-          grid.innerHTML = '<div class="no-results">No products found matching your filters.</div>';
+          grid.innerHTML = '<div class="no-results">No products found.</div>';
         } else {
           paginated.forEach(p => {
             const card = document.createElement('div');
@@ -1120,13 +1052,11 @@
             card.innerHTML = `
               <div class="product-image-container">
                 <div class="pills-container">
-                  <span class="pill pill-brand">${p.brand}</span>
                   <span class="pill pill-category">${p.category}</span>
                 </div>
-                <img src="${p.image}" alt="${p.name}" class="product-image" loading="lazy">
+                <img src="${p.image}" alt="Imported Tiles" class="product-image" loading="lazy">
               </div>
-              <div class="product-details">
-                <h3 class="product-name">${p.name}</h3>
+              <div class="product-details" style="padding: 1.25rem 1.5rem;">
                 <a href="contact.html" class="enquire-btn">Enquire Now</a>
               </div>
             `;
@@ -1173,23 +1103,6 @@
           pagination.appendChild(nextBtn);
         }
       }
-      
-      // Event Listeners
-      brandCheckboxes.forEach(cb => {
-        cb.addEventListener('change', () => {
-          currentPage = 1;
-          renderProducts();
-        });
-      });
-      
-      mobileBrandSelect.addEventListener('change', () => {
-        currentPage = 1;
-        renderProducts();
-      });
-      
-      window.addEventListener('resize', () => {
-        renderProducts();
-      });
       
       // Initial render
       renderProducts();
