@@ -895,14 +895,16 @@ header.header-scrolled {
   border: 1px solid var(--accent);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background: linear-gradient(135deg, rgba(197,168,128,0.06) 0%, var(--bg-primary) 100%);
   margin-bottom: 3.5rem;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
   .verade-featured-card {
-    display: block;
+    grid-template-columns: 1fr;
   }
 }
 
