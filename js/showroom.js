@@ -29,7 +29,7 @@ function initShowroomHotspots() {
     3: {
       title: "Bespoke Wellness Spa & Sauna Cabin",
       brand: "Home Studio Import Curation",
-      category: "Sauna, Steam & Spas",
+      category: "Sauna, Steam & Spa",
       description: "An authentic glass-fronted sauna cabin displaying Canadian Hemlock timber construction, integrated chromotherapy lighting, precise dry-heat controls, and steam generators representing the pinnacle of personal wellness."
     },
     4: {
@@ -101,7 +101,7 @@ function initShowroomTour() {
       image: "images/tiles.jpg"
     },
     5: {
-      title: "5. Wellness Sanctuary: Steam, Sauna & Spa",
+      title: "5. Wellness Sanctuary: wellness & spa",
       description: "Conclude your tour in the Wellness Sanctuary. Explore our working models of Jacuzzi tubs, steam generators, and custom dry-sauna cabins. Learn how our engineering team integrates custom installations into your luxury home.",
       image: "images/windows.jpg" // Using window as landscape/spa visualization asset
     }
